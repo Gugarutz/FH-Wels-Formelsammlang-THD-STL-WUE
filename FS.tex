@@ -1,0 +1,112 @@
+% !TeX spellcheck = de_DE
+% Bitte benutze TexLive und TexStudio
+
+\documentclass[	a4paper
+				,11pt
+				,oneside
+				,egregdoesnotlikesansseriftitles	% disable all sans serif
+				,fleqn
+				]{scrartcl}
+	\RedeclareSectionCommand[beforeskip=1em]{subsection}
+	\RedeclareSectionCommand[afterskip=0.5em]{subsection}
+	\RedeclareSectionCommand[afterskip=0.5em]{section}
+
+\usepackage[automark]{scrlayer-scrpage} % best package for head and foot control
+	\clearpairofpagestyles		% clears existing pagestyle % \clearscrheadfoot deprecated
+	%\automark[section]{section} 	% [right] and {left} markings respectively
+	%\ihead[]{\headmark}			% auto assign even and odd to left and right resp
+	\cfoot[]{\pagemark}			% pagenumber
+
+
+\usepackage[ngerman]{babel}   	% Deutsche Einstellungen
+\usepackage[utf8]{inputenc}  	% utf-8 Eingabe
+\usepackage[T1]{fontenc}      	% Korrekte Behandlung von Sonderzeichen in der Ergebnis PDF-Datei.
+\usepackage{csquotes}         	% Für Anführungsstriche
+\usepackage{mathtools}			% loads amsmath
+\usepackage{relsize,exscale}	% sizing
+\usepackage{array}
+\usepackage{xfrac,nicefrac}
+\usepackage{multirow} 			% Zellenübergreifende reihen und Spalten
+\usepackage[nodisplayskipstretch]{setspace}
+	\onehalfspacing
+\usepackage{indentfirst} 		% indents first paragraph
+
+\usepackage{lmodern}
+
+\usepackage{geometry}
+	\geometry{	a4paper,
+				top=1cm,
+				bottom=0.7cm,
+				left=2cm,
+				right=0.5cm,
+				footskip=0.5cm,
+				headsep=0pt,
+				includeheadfoot
+			}
+
+\usepackage{graphicx}
+	\graphicspath{{graphics/}}
+	\usepackage{subcaption}
+
+\usepackage{siunitx}
+	\sisetup{	locale = DE, 			% localisation
+				per-mode=fraction,	    % display as fractions
+				fraction-function=\dfrac,
+				separate-uncertainty}	% uncertainty as plus minus not a bracket
+
+\title{Formelsammlungen}
+\author{Georg Aichinger, Demid Ermak}
+\date{November 2022}
+
+\renewcommand{\arraystretch}{1.2} % Reihen seperation global
+
+%new commands Math
+	\newcommand{\dd}{{\operatorname{d\!l}}}
+	\newcommand{\imag}{\mathrm{i}}
+	\newcommand{\eul}{\mathrm{\textbf{e}}}
+	\newcommand{\abs}[1]{\left|#1\right|}
+	\newcommand{\deriv}[2]{\frac{\dd #1}{\dd #2}}
+	
+	\newcommand{\Cone}{\mathrm{C_1}}
+	\newcommand{\Ctwo}{\mathrm{C_2}}
+	\newcommand{\Cs}{\mathrm{C_s}}
+	\newcommand{\COT}{\mathrm{C_{12}}}
+	
+%Text
+	\newcommand{\ue}{\ddot{u}} % einfaches ü nicht verwenden, da nicht kursiv
+	\newcommand{\oum}{\ddot{o}}
+	\newcommand{\aum}{\ddot{a}}
+	\newcommand{\tb}{\textbackslash}
+	\newcommand{\eff}{e\!f\!f}
+
+%% Dimensionslose jedoch namenbehaftete Kenngrößen
+	\newcommand{\Arch}{\operatorname{\mathit{A\kern-.06em r}}} % http://de.wikipedia.org/wiki/Archimedes-Zahl
+	\newcommand{\Biot}{\operatorname{\mathit{B\kern-.10em i}}} % http://de.wikipedia.org/wiki/Biot-Zahl
+	\newcommand{\Cauc}{\operatorname{\mathit{C\kern-.07em a}}} % http://de.wikipedia.org/wiki/Cauchy-Zahl
+	\newcommand{\Damk}{\operatorname{\mathit{D\kern-.06em a}}} % http://de.wikipedia.org/wiki/Damk%C3%B6hler-Zahl
+	\newcommand{\Eule}{\operatorname{\mathit{E\kern-.03em u}}} % http://de.wikipedia.org/wiki/Euler-Zahl
+	\newcommand{\Four}{\operatorname{\mathit{F\kern-.10em o}}} % http://de.wikipedia.org/wiki/Fourier-Zahl
+	\newcommand{\Frou}{\operatorname{\mathit{F\kern-.07em r}}} % http://de.wikipedia.org/wiki/Froude-Zahl
+	\newcommand{\Gras}{\operatorname{\mathit{G\kern-.05em r}}} % http://de.wikipedia.org/wiki/Grashof-Zahl
+	\newcommand{\Karl}{\operatorname{\mathit{K\kern-.11em a}}} % http://de.wikipedia.org/wiki/Karlovitz-Zahl
+	\newcommand{\Knud}{\operatorname{\mathit{K\kern-.11em n}}} % http://de.wikipedia.org/wiki/Knudsen-Zahl
+	\newcommand{\Lewi}{\operatorname{\mathit{L\kern-.05em e}}} % http://de.wikipedia.org/wiki/Lewis-Zahl
+	\newcommand{\Mach}{\operatorname{\mathit{M\kern-.20em a}}} % http://de.wikipedia.org/wiki/Mach-Zahl
+	\newcommand{\Nuss}{\operatorname{\mathit{N\kern-.20em u}}} % http://de.wikipedia.org/wiki/Nusselt-Zahl
+	\newcommand{\Pecl}{\operatorname{\mathit{P\kern-.08em e}}} % http://de.wikipedia.org/wiki/P%C3%A9clet-Zahl
+	\newcommand{\Pran}{\operatorname{\mathit{P\kern-.10em r}}} % http://de.wikipedia.org/wiki/Prandtl-Zahl
+	\newcommand{\Rayl}{\operatorname{\mathit{R\kern-.10em a}}} % http://de.wikipedia.org/wiki/Rayleigh-Zahl
+	\newcommand{\Reyn}{\operatorname{\mathit{R\kern-.10em e}}} % http://de.wikipedia.org/wiki/Reynolds-Zahl
+	\newcommand{\Schm}{\operatorname{\mathit{S\kern-.07em c}}} % http://de.wikipedia.org/wiki/Schmidt-Zahl
+	\newcommand{\Sher}{\operatorname{\mathit{S\kern-.07em h}}} % http://de.wikipedia.org/wiki/Sherwood-Zahl
+	\newcommand{\Stro}{\operatorname{\mathit{S\kern-.07em r}}} % http://de.wikipedia.org/wiki/Strouhal-Zahl
+	\newcommand{\Webe}{\operatorname{\mathit{W\kern-.30em e}}} % http://de.wikipedia.org/wiki/Weber-Zahl
+
+\usepackage{showframe}			% shows frames around margin, head, foot, etc;
+%\includeonly{THD}
+
+\begin{document}
+	\include{THD}
+	\include{STL}
+	\include{WUE}
+\end{document}
