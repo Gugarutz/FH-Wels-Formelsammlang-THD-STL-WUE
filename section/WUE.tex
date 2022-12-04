@@ -125,24 +125,33 @@
 			& \text{Korrekturfaktor } f_5
 			& \text{Längs umströmter Zylinder:} \\
 		 \Nuss = \Nuss_{Zylinder,\ang{90}} \ f_5
-			&  f_5 = ???
+			&  f_5 = \text{siehe Diag. nach \ref{sec:um-in-durch}}
 			&  \Nuss =  \Nuss_{Platte}  \left(1+ 2,3 \dfrac{L}{d} \Reyn_L^{-0,5}\right)
 	\end{array}\]
 
-\subsubsection{Umströmung in Durchströmung}
-		\setlength{\abovedisplayskip}{-20pt}
-		\[ \arraycolsep=1em  \def\arraystretch{1.6}
+\subsubsection{Umströmung in Durchströmung} \label{sec:um-in-durch}
+		\skipabove{-20pt}
+		\[ \arraycolsep=1em  \def\arraystretch{1.7}
 		\begin{array}{ll}
-			\text{Hohlraumanteil:} & \multirow{2}{0.19\textwidth}{\includegraphics[width=\linewidth]{hohlraumanteil}}\\
-			\varepsilon = 1- \dfrac{V_K}{V_0}  \qquad  c = \dfrac{c_0}{\varepsilon}  &\\
-			\text{Rohrbündel:} & \multirow{7}{0.4\textwidth}{\includegraphics[width=\linewidth]{rohrbuendel}}\\
-		    a = \dfrac{s_1}{d}  \qquad  b = \dfrac{s_2}{d}  & \\
-			\Nuss_{B\ue ndel} = \Nuss_{einzel}\ f_A & \\
-			f_{A,fluchtend} = 1+ \dfrac{0,7 \left(\nicefrac{b}{a}-0,3\right)}{\varepsilon \left(\nicefrac{b}{a}+0,7\right)^2} &\\
-			f_{A,versetzt} = 1 + \dfrac{2}{3\ b} & \\
-			n < 10: f_A = \dfrac{1+ (n-1) f_A}{n} & \\
-			&
+			\text{Hohlraumanteil:}                                                                                            & \multirow{3}{0.24\textwidth}{\includegraphics[width=\linewidth]{hohlraumanteil}} \\
+			\varepsilon = 1- \dfrac{V_K}{V_0}  \qquad  c = \dfrac{c_0}{\varepsilon}                                           &                                                                                  \\
+			\text{Rohrbündel:}                                                                                                & \multirow{9}{0.5\textwidth}{\includegraphics[width=\linewidth]{rohrbuendel}}    \\
+			a = \dfrac{s_1}{d}  \qquad  b = \dfrac{s_2}{d}                                                                    &                                                                                  \\
+			\Nuss_{B\ue ndel} = \Nuss_{einzel}\ f_A                                                                           &                                                                                  \\
+			f_{A,fluchtend} = 1+ \dfrac{0,7 \left(\nicefrac{b}{a}-0,3\right)}{\varepsilon \left(\nicefrac{b}{a}+0,7\right)^2} &                                                                                  \\
+			f_{A,versetzt} = 1 + \dfrac{2}{3\ b}                                                                              &                                                                                  \\
+			n < 10: f_A = \dfrac{1+ (n-1) f_A}{n}                                                                             &                                                                                  \\
+			                                                                                                                  &                                                                                  \\
+			                                                                                                                  &                                                                                  \\
+			                                                                                                                  &
 		\end{array} \]
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=9cm]{nusselt-winkel}
+		\caption{Weil die Formel für $ f_5 $ noch fehlt}
+	\end{figure}
+
 
 \clearpage
 \subsection{Freie Konvektion}
