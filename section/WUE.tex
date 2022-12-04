@@ -159,8 +159,10 @@
 	\setlength{\abovedisplayskip}{-10pt}
 	\[ \arraycolsep=0.7em  \def\arraystretch{1.4}
 	\begin{array}{llc}
-		\text{mit Ablösung:} & \Nuss = 0,56 \displaystyle\sqrt[4]{\Rayl_{krit}\, \cos\alpha} + 0,13 \left( \sqrt[3]{\Rayl} - \sqrt[3]{\Rayl_{krit}} \right) & \multirow{3}{5cm}{\includegraphics[width=\linewidth]{rayleigh-krit}} \\
-		 & \Rayl_{krit} = 10^{(8,9 - 0,013\ \alpha - \num{5,95e-4}\ \alpha^2)} \text{ mit } \alpha \text{ in °} &\\
+		\text{mit Ablösung:}
+			& \Nuss = 0,56 \displaystyle\sqrt[4]{\Rayl_{krit}\, \cos\alpha} + 0,13 \left( \sqrt[3]{\Rayl} - \sqrt[3]{\Rayl_{krit}} \right)
+			& \multirow{8}{5cm}{\includegraphics[width=\linewidth]{rayleigh-krit}} \\
+		 & \Rayl_{krit} = 10^{(8,9 - 0,013\ \alpha - \num{5,95e-4}\ \alpha^2)} \text{ mit } \alpha \text{ in °} & \\
 		 \multicolumn{2}{l}{\includegraphics[width=11cm]{wand-abloesung}}
 	\end{array}\]
 
@@ -177,37 +179,32 @@
 \subsubsection{Überlagerung mit erzwungener Konvektion}
 	\[ \Nuss = \sqrt[3]{\Nuss_{erzwungen}^3 \pm \Nuss_{frei}^3} \qquad \text{+\dots gleichgerichtete, $-$\dots entgegen-gerichtete Mischkonvektion}\]
 
-\clearpage
+% \clearpage
 \subsection{Wärmestrahlung zw. Oberflächen}
 	\setlength{\abovedisplayskip}{-15pt}
 	\[ \arraycolsep=0.4em  \def\arraystretch{1.7}
 	\begin{array}{llc}
-		\text{Strahlungsbilanz:}                          & a + r + t  =  1                                                                                                                                                                                     & \multirow{3}{6cm}{\includegraphics[width=\linewidth]{strahlung-planck}} \\
-		\text{Planck'sches Gesetz:}                       & i_{s(\lambda,T)}  =  \dfrac{\Cone}{\lambda^5\left(\exp\left( \dfrac{\Ctwo}{\lambda\ T} \right) - 1\right)}                                                                                          &                                                                         \\
-		\text{Mit: } \Cone=\qty{3,7418e-16}{\W\m\squared} & \Ctwo = \qty{1,438e-2}{\K\m\squared}                                                                                                                                                                &                                                                         \\
-		\text{Wien'sches Gesetz:}                         & \lambda_{s,max}  =  \dfrac{2898}{T}  [\unit{\micro\m}]                                                                                                                                              &                                                                         \\
-		\text{Stefan Boltzmann Gesetz:}                   & \dot{q}_{s(T)}  =  \displaystyle\int_{\lambda = 0}^{\infty} i_{s(\lambda,T)} \ \dd \lambda  =  \Cs \left(\dfrac{T}{100}\right)^4                                                                    & \Cs  =  5,67                                                            \\
-		\text{Graue Bande:}                               & \multicolumn{2}{l}{\dot{q}_{\lambda,s(T)}  =  \displaystyle\int_{\lambda = 0}^{\lambda} i_{s(\lambda,T)} \ \dd \lambda  = \varepsilon_{(\lambda)}\  f_{(\lambda,T)}\ \dot{q}_{s(T)}}                                                                                          \\
-		\text{Kirchhoff'sches Gesetz:}                    & a = \varepsilon                                                                                                                                                                                     &                                                                         \\
-		\text{Wärmestrom zw. zwei Flächen:}               & \dot{Q}_{12} = C_{12}\ A_{w1}\left[\left(\dfrac{T_1}{100}\right)^4 -\ \left( \dfrac{T_2}{100} \right) ^4\right]                                                                                     &                                                                         \\
-		\multicolumn{2}{l}{ \text{Parallele Platten 1 und 2 mit N Platten ($\varepsilon_s$) dazwischen:}}                                                                                                                                                       &                                                                         \\
-		\multicolumn{2}{l}{ \qquad C_{12} = \Cs\left[\dfrac{1}{\varepsilon_1} + \dfrac{1}{\varepsilon_2} -1 + N \left(\dfrac{2}{\varepsilon_s} - 1\right)\right] ^{-1}}                                                                                         &                                                                         \\
-		\multicolumn{3}{l}{	\text{Konzentrische Zylinder/Kugelschalen (1 innen, 2 außen); N Schalen ($ \varepsilon_s $) dazwischen:}}                                                                                                                                                                                                     \\
-		\multicolumn{2}{l}{	\qquad C_{12} = \Cs\left[ \dfrac{1}{\varepsilon_1} + \dfrac{A_{w1}}{A_{w2}} \left(\dfrac{1}{\varepsilon_2} -1\right) + \left(\dfrac{2}{\varepsilon_s} - 1\right) \displaystyle\sum_{i=1}^{N} \dfrac{A_{w1}}{A_{wsi}} \right] ^{-1}} &                                                                         \\
-		\text{Beliebig orientierte Flächen:}              & C_{12} = \Cs\dfrac{\varepsilon_1\ \varepsilon_2\ \varphi_{12}}{1-\left(1- \varepsilon_1\right)\left(1-\varepsilon_2\right) \varphi_{12}\ \varphi_{21}\ }                                            &                                                                         \\
-		\text{\qquad mit Einstrahlzahlen:}                & \varphi_{12} = A_{w2} \dfrac{\cos{\beta_1}\cos{\beta_2}}{r^2\ \pi}   =  \varphi_{21} \dfrac{A_{w2}}{A_{w1}}                                                                                         &                                                                         \\
-		\text{Umschlossener Körper 1:}                    & C_{12}  = \Cs \left[ \dfrac{1}{\varepsilon_1} +  \dfrac{A_{w1}}{A_{w2}} \left(\dfrac{1}{\varepsilon_2} - 1\right) \right]^{-1}                                                                      &                                                                         \\
-		\text{\qquad wenn }A_{w2} \gg A_{w1}:             & C_{12} = \varepsilon_1\ \Cs                                                                                                                                                                         &                                                                         \\
-		\text{Äquivalenter Wärmübergangskoeffizient:}     & \alpha_{Str} = \abs{\dfrac{{\dot{q}}_{Str}}{T_w - T_{fl}}}                                                                                                                                          &                                                                         \\
-		\text{Emissionsgrad Umrechnung:}                  & \dfrac{\varepsilon}{\varepsilon_n}                                                                                                                                                                  &
+		\text{Strahlungsbilanz:}                          & a + r + t  =  1                                                                                                                                                                                     & \multirow{12}{2.6cm}{\includegraphics[width=\linewidth]{strahlung-tabelle-1}} \\
+		\text{Planck'sches Gesetz:}                       & i_{s(\lambda,T)}  =  \dfrac{\Cone}{\lambda^5\left(\exp\left( \dfrac{\Ctwo}{\lambda\ T} \right) - 1\right)}                                                                                          &                                                                               \\
+		\text{Mit: } \Cone=\qty{3,7418e-16}{\W\m\squared} & \Ctwo = \qty{1,438e-2}{\K\m\squared}                                                                                                                                                                &                                                                               \\
+		\text{Wien'sches Gesetz:}                         & \lambda_{s,max}  =  \dfrac{2898}{T}  [\unit{\micro\m}]                                                                                                                                              &                                                                               \\
+		\text{Stefan Boltzmann Gesetz: mit }\Cs  =  5,67  & \dot{q}_{s(T)}  =  \displaystyle\int_{\lambda = 0}^{\infty} i_{s(\lambda,T)} \ \dd \lambda  =  \Cs \left(\dfrac{T}{100}\right)^4                                                                    &                                                                               \\
+		\text{Graue Bande:}                               & \dot{q}_{\lambda,s(T)}  =  \displaystyle\int_{\lambda = 0}^{\lambda} i_{s(\lambda,T)} \ \dd \lambda  = \varepsilon_{(\lambda)}\  f_{(\lambda,T)}\ \dot{q}_{s(T)}                                    &                                                                               \\
+		\text{Kirchhoff'sches Gesetz:}                    & a = \varepsilon                                                                                                                                                                                     &                                                                               \\
+		\text{Wärmestrom zw. zwei Flächen:}               & \dot{Q}_{12} = C_{12}\ A_{w1}\left[\left(\dfrac{T_1}{100}\right)^4 -\ \left( \dfrac{T_2}{100} \right) ^4\right]                                                                                     &                                                                               \\
+		\multicolumn{2}{l}{ \text{Parallele Platten 1 und 2 mit N Platten ($\varepsilon_s$) dazwischen:}}                                                                                                                                                       &                                                                               \\
+		\multicolumn{2}{l}{ \qquad C_{12} = \Cs\left[\dfrac{1}{\varepsilon_1} + \dfrac{1}{\varepsilon_2} -1 + N \left(\dfrac{2}{\varepsilon_s} - 1\right)\right] ^{-1}}                                                                                         &                                                                               \\
+		\multicolumn{2}{l}{	\text{Konzentrische Zylinder/Kugelschalen (1 innen, 2 außen); N Schalen ($ \varepsilon_s $) dazwischen:}}                                                                                                                           &                                                                               \\
+		\multicolumn{2}{l}{	\qquad C_{12} = \Cs\left[ \dfrac{1}{\varepsilon_1} + \dfrac{A_{w1}}{A_{w2}} \left(\dfrac{1}{\varepsilon_2} -1\right) + \left(\dfrac{2}{\varepsilon_s} - 1\right) \displaystyle\sum_{i=1}^{N} \dfrac{A_{w1}}{A_{wsi}} \right] ^{-1}}   & \multirow{12}{2.5cm}{\includegraphics[width=\linewidth]{strahlung-tabelle-2}}     \\
+		\text{Beliebig orientierte Flächen:}              & C_{12} = \Cs\dfrac{\varepsilon_1\ \varepsilon_2\ \varphi_{12}}{1-\left(1- \varepsilon_1\right)\left(1-\varepsilon_2\right) \varphi_{12}\ \varphi_{21}\ }                                            &    \\
+		\text{\qquad mit Einstrahlzahlen:}                & \varphi_{12} = A_{w2} \dfrac{\cos{\beta_1}\cos{\beta_2}}{r^2\ \pi}   =  \varphi_{21} \dfrac{A_{w2}}{A_{w1}}                                                                                         &                                                                               \\
+		\text{Umschlossener Körper 1:}                    & C_{12}  = \Cs \left[ \dfrac{1}{\varepsilon_1} +  \dfrac{A_{w1}}{A_{w2}} \left(\dfrac{1}{\varepsilon_2} - 1\right) \right]^{-1}                                                                      &                                                                               \\
+		\text{\qquad wenn }A_{w2} \gg A_{w1}:             & C_{12} = \varepsilon_1\ \Cs                                                                                                                                                                         &                                                                               \\
+		\text{Äquivalenter Wärmübergangskoeffizient:}     & \alpha_{Str} = \abs{\dfrac{{\dot{q}}_{Str}}{T_w - T_{fl}}}                                                                                                                                          &                                                                               \\
+		\text{Emissionsgrad Umrechnung:}                  & \dfrac{\varepsilon}{\varepsilon_n}                                                                                                                                                                  &                                                                               \\
+		\includegraphics[width=7cm]{strahlung-epsilon}    & \includegraphics[width=7cm]{strahlung-planck}       &
 	\end{array} \]
-\begin{figure}[h!b]
-	\raggedright
-	\begin{subfigure}{6cm}
-		\centering
-		\includegraphics[width=\linewidth]{strahlung-epsilon}
-	\end{subfigure}
-\end{figure}
+
 
 
 \subsection{Einseitig konstante Temperatur, Gleichstrom und Gegenstrom}
