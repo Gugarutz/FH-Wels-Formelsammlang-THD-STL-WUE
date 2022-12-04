@@ -263,7 +263,7 @@
 	\underline{Gesucht:} \textbf{Auslasstemperaturen beidseitig}
 
 	\begin{singlespace}
-		\underline{Berechnung: }
+		\underline{Berechnung:}
 		\begin{enumerate}
 			\item Vervollständigung geometrischer Daten (z.B. char. Abmessungen) und der Einlass-Zustände
 			\item Annahme von k bzw. Übernahme von k aus Auslegung, iterative Aktualisierung:
@@ -277,7 +277,7 @@
 	\setlength{\abovedisplayshortskip}{-5pt}
 	\[
 		T_{H2} =  T_{H1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)
-		\qquad\qquad \mu = \dfrac{1}{\dot{W}_H} + \dfrac{1}{\dot{W}_K}
+		\hfil \mu = \dfrac{1}{\dot{W}_H} + \dfrac{1}{\dot{W}_K} \hfil
 	\]
 	\[
 		T_{K2} =  T_{K1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)
@@ -313,19 +313,25 @@
 
 
 \subsection{Gasstrahlung}
-	Wärmestrom zw. heißem Gas (Flamme: $ \varepsilon_g,~ T_g $) einerseits und Wänden ($ T_w,~ \varepsilon_w $)
+	Wärmestrom zw. heißem Gas (Flamme: $ \varepsilon_g,\ T_g $) einerseits und Wänden ($ T_w,\ \varepsilon_w $)
 
-	und kaltem Gas an Wänden ($ T_w,~ a_g $) andererseits:
+	und kaltem Gas an Wänden ($ T_w,\ a_g $) andererseits:
 
+	\skipabove{0pt}
 	\[ \varepsilon = \dfrac{\varepsilon_w\ \Cs\ A_w}{1-\left(1-a_g\right)\ (1-\varepsilon_w)\ } \left[ \varepsilon_g \left( \dfrac{T_g}{100} \right)^4 - a_g \left( \dfrac{T_w}{100} \right)^4 \right] \]
 
-	mit $ \varepsilon_g  =  \varepsilon_{H2O} + \varepsilon_{CO2} - (\Delta\varepsilon)_g  $
+	\[ \begin{array}{llp{1em}ll}
+		\varepsilon_g & = \varepsilon_{\ch{H2O}} + \varepsilon_{\ch{CO2}} - (\Delta\varepsilon)_g                                 &  & a_g           & = a_{\ch{H2O}} + a_{\ch{CO2}} - (\Delta \varepsilon)_g                                                  \\
+		a _{\ch{H2O}}  & = \varepsilon_{ \ch{H2O} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,45} &  & a _{\ch{CO2}} & = \varepsilon_{ \ch{CO2} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,65}
+	\end{array}\]
 
 
 
 	Emissionsgrade = Absorptionsgrade aus Diagrammen in Abhängigkeit von Temperatur, Druck, Partialdruck
 
-	von CO2 bzw. H2O, überlappenden Banden und gleichwertiger Schichtdicke $ s $
+	von \ch{CO2} bzw. \ch{H2O}, überlappenden Banden und gleichwertiger Schichtdicke $ s $
+
+	\[ s= 0,9\, \dfrac{4\ V_g}{A_w} \]
 
 
 
