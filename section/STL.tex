@@ -291,16 +291,20 @@
 
 	\clearpage
 \subsection{Umströmung stumpfer Körper}
-	Char. Länge $ L_{char} $ = Hydraulischer Durchmesser der Schattenfläche in Strömungsrichtung
+	\begin{doublespace}
+		Char. Länge $ L_{char} $ = Hydraulischer Durchmesser der Schattenfläche in Strömungsrichtung
 
-	Bezugsfläche $ A $ = Schattenfläche in Anströmrichtung
+		Bezugsfläche $ A $ = Schattenfläche in Anströmrichtung
 
-	Umströmungsgeschwindigkeit an dickster Stelle (Apex): Zylinder: $ c_{Apex}= 2\ c_{rel} $\quad Kugel: $ c_{Apex}= 1,5\ c_{rel}  $
-
+		Umströmungsgeschwindigkeit an dickster Stelle (Apex): Zylinder: $ c_{Apex}= 2\ c_{rel} $\quad Kugel: $ c_{Apex}= 1,5\ c_{rel}  $
+	\end{doublespace}
+	\vspace{-0.8em}
 \subsection{Dynamischer Auftrieb}
-	Char. Länge $ L_{char} $ = Sehnenlänge des Profils $ L $
+	\begin{doublespace}
+		Char. Länge $ L_{char} $ = Sehnenlänge des Profils $ L $
 
-	Bezugsfläche $ A $ = Grundfläche des Profils bei Anstellwinkel $ \alpha = \qty{0}{\degree} $
+		Bezugsfläche $ A $ = Grundfläche des Profils bei Anstellwinkel $ \alpha = \qty{0}{\degree} $
+	\end{doublespace}
 
 	\[\arraycolsep=0.9em % for the horizontal padding
 		\begin{array}{llll}
@@ -309,11 +313,11 @@
 		\end{array} \]
 
 \subsection{Kompressible Flüssigkeiten}
-	\setlength{\abovedisplayshortskip}{-30pt}
-	\[\arraycolsep=0.2em \def\arraystretch{1.7}
-	\begin{array}{lrlll}
-		\text{Schallgeschwindigkeit:} & a = \sqrt{\dfrac{E}{\varrho}} & \text{\qquad} & \text{Flüssigkeit in elastischen Rohren:} & a = \dfrac{\sqrt{\dfrac{E}{\varrho}}} {\sqrt{1+ \dfrac{d\ E}{s\ E_R}}} \\
-		\text{Joukowski Stoß:}        & \Delta p = \varrho\ a\ c      & \text{\qquad} & \text{Empfohlene Schließzeit:}            & \Delta t > 3\, \dfrac{2\ L}{A}
+	\skipabove{-25pt}
+	\[\arraycolsep=0.2em \def\arraystretch{1.5}
+	\begin{array}{lr p{2em} ll}
+		\text{Schallgeschwindigkeit:}  & a = \sqrt{\dfrac{E}{\varrho}}  &  & \text{Flüssigkeit in elastischen Rohren:} & a = \dfrac{\sqrt{\dfrac{E}{\varrho}}} {\sqrt{1+ \dfrac{d\ E}{s\ E_R}}} \\
+		\text{Empfohlene Schließzeit:} & \Delta t > 3\, \dfrac{2\ L}{A} &  & \text{Joukowski Stoß:}                    & \Delta p = \varrho\ a\ c
 	\end{array} \]
 
 \subsection{Gas-Flüssig Strömung}
@@ -326,7 +330,7 @@
 	\end{array} \]
 \subsection{Senkrechter Verdichtungsstoß}
 	\setlength{\abovedisplayskip}{-15pt}
-		\[ \arraycolsep=0.5em \def\arraystretch{2}
+		\[ \arraycolsep=0.5em \def\arraystretch{2.5}
 		\begin{array}{llp{1em}ll}
 			\text{EB: } \dfrac{c_2}{c_1} = \dfrac{1}{\kappa+1}  \left[ \kappa - 1 + \dfrac{2}{\Mach_1^2}\right]                                    & < 1 &  & \text{IB: } \dfrac{p_2}{p_1} = 1+ \dfrac{2\ \kappa}{\kappa+1} (\Mach_1^2 - 1)                   & > 1 \\
 			\text{MB: } \dfrac{\varrho_2}{\varrho_1} = \dfrac{(\kappa+1)\Mach_1^2}  {(\kappa-1)\Mach_1^2 + 2}                                      & > 1 &  &                                                                                                 &     \\
@@ -347,14 +351,14 @@
 		\text{\quad} &
 	\end{array} \]
 
-\section{Erweiterungen zu Laval-Düse}
+\subsection{Erweiterungen zu Laval-Düse}
 	Index $ a \dots $ Auslass;  $ k \dots $ kritischer/engster Querschnitt;  $ \alpha $ Winkel der Düse, bezogen auf Strömungsrichtung
 
-	\skipabove{0pt}
+	\skipabove{-5pt}
 	\[
 		\dfrac{A_a}{A_k} = \dfrac{1}{\Mach}  \left[ 1 + \dfrac{\kappa - 1}{\kappa + 1} \left( \Mach^2 -1 \right) \right] ^{\dfrac{\kappa + 1}{2\ (\kappa - 1)}}
 		\qquad
 		L = \dfrac{D_a - D_k}{2 \tan\alpha}
 		\qquad
-		\Psi
+		\dfrac{\psi_a}{\psi_k} =  \dfrac{A_k}{A_a}
 	\]
