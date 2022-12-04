@@ -309,20 +309,32 @@
 
 	 $ F $ aus Betriebscharakteristik: $ f(P_H, \,N_H, \,N_K) = 0 $ oder $ f(P_H, \,N_H, \,R_H) = 0 $
 
+\clearpage
 \subsection{Regeneratoren}
+	\[ \arraycolsep=0.1em  \def\arraystretch{1.6}
+	\begin{array}{r l p{3em} r l}
+		\Delta Q                                      & = \alpha_H\ A_w  \left(T_H - T_{wH}\right) \Delta t_H  &  & \Delta Q      & = \dfrac{\lambda_s}{\Delta s_w} A_w \left(T_{wH} - T_s\right) \Delta t_H                  \\
+		\Delta Q                                      & = \alpha_K\ A_w  \left(T_{wK} - T_K\right) \Delta t_K  &  & \Delta Q      & = \dfrac{\lambda_s}{\Delta s_w} A_w \left(T_s - T_{wK}\right) \Delta t_K                  \\
+		\dfrac{\Delta Q}{\Delta t_{H} + \Delta t_{K}} & = \dot{Q} = f\ k_0\ A _{w} \left( T_{H} - T_{K}\right) &  & T_{H} - T_{K} & = \dfrac{\Delta T_{a} - \Delta T_{b}}{\ln \left(\frac{\Delta T_{a}}{\Delta T_{b}}\right)} \\
+		\Delta T_{a}                                  & = T_{H1} - T_{K2}                                      &  & \Delta T_{b}  & = T_{H2} - T_{K1} \\
+		\dfrac{1}{k_0} & \multicolumn{4}{l}{= \left(\Delta t_{H} + \Delta t_{K}\right)  \left[\dfrac{1}{\alpha_{H}\ \Delta t_{H}} + \dfrac{1}{\alpha_{K}\ \Delta t_{K}} + \dfrac{\Delta s_{W}\ \Phi}{\lambda_{s}}  \left(\dfrac{1}{\Delta t_{H}}+\dfrac{1}{\Delta t_{K}}\right) \right]} \\
+		 \text{mit } f,\ \Phi \text{ aus:}
+	\end{array}\]
 
 
+	\includegraphics[width=0.95\textwidth]{regeneratoren}
 \subsection{Gasstrahlung}
 	Wärmestrom zw. heißem Gas (Flamme: $ \varepsilon_g,\ T_g $) einerseits und Wänden ($ T_w,\ \varepsilon_w $)
 
 	und kaltem Gas an Wänden ($ T_w,\ a_g $) andererseits:
 
 	\skipabove{0pt}
-	\[ \varepsilon = \dfrac{\varepsilon_w\ \Cs\ A_w}{1-\left(1-a_g\right)\ (1-\varepsilon_w)\ } \left[ \varepsilon_g \left( \dfrac{T_g}{100} \right)^4 - a_g \left( \dfrac{T_w}{100} \right)^4 \right] \]
+	\[ \dot{Q} = \dfrac{\varepsilon_w\ \Cs\ A_w}{1-\left(1-a_g\right)\ (1-\varepsilon_w)\ } \left[ \varepsilon_g \left( \dfrac{T_g}{100} \right)^4 - a_g \left( \dfrac{T_w}{100} \right)^4 \right] \]
 
-	\[ \begin{array}{llp{1em}ll}
-		\varepsilon_g & = \varepsilon_{\ch{H2O}} + \varepsilon_{\ch{CO2}} - (\Delta\varepsilon)_g                                 &  & a_g           & = a_{\ch{H2O}} + a_{\ch{CO2}} - (\Delta \varepsilon)_g                                                  \\
-		a _{\ch{H2O}}  & = \varepsilon_{ \ch{H2O} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,45} &  & a _{\ch{CO2}} & = \varepsilon_{ \ch{CO2} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,65}
+	\[ \arraycolsep=0.1em  \def\arraystretch{1.3}
+	\begin{array}{r l p{3em} r l}
+		\varepsilon_g & = \varepsilon_{\ch{H2O}} + \varepsilon_{\ch{CO2}} - (\Delta\varepsilon)_g                           &  & a_g           & = a_{\ch{H2O}} + a_{\ch{CO2}} - (\Delta \varepsilon)_g                                              \\
+		a _{\ch{H2O}} & = \varepsilon_{ \ch{H2O} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,45} &  & a _{\ch{CO2}} & = \varepsilon_{ \ch{CO2} ( Tw , p \ch{H2O}\ \sfrac{Tg}{Tw})}  \left(\dfrac{T_g}{T_w}\right) ^{0,65}
 	\end{array}\]
 
 
