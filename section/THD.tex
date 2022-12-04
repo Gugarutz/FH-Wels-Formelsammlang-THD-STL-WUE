@@ -95,78 +95,74 @@
 %
 \vspace {-1em}
 %
-\begin{flushleft}
+\begin{flushleft} % nicht sicher ob das mit array auch ginge
 	\setlength{\tabcolsep}{0em} % for the horizontal padding
 	\begin{tabular}{lp{4em}l}
-		\parbox{6cm}{\subsection{Geschlossene Systeme}} &  & \parbox{5cm}{\subsection{Offene Systeme}}                                                    \\
-		\qquad  $ \Delta w_v = -\int p \ \dd v $        &  & \qquad $ \Delta U + \Delta E_a = \Delta Q_a + \Delta W_i + \sum \Delta m_j \ (h_j+ e_{aj}) $
+		\parbox{6cm}{\subsection{Geschlossene Systeme}} &  & \parbox{5cm}{\subsection{Offene Systeme}}                                                     \\
+		\hskip 1.35cm  $ \Delta w_v = -\int p\ \dd v $   &  & \qquad $ \Delta U + \Delta E_a = \Delta Q_a + \Delta W_i + \sum \Delta m_j \ (h_j + e_{aj}) $
 	\end{tabular}
 \end{flushleft}
 
 \subsection{Einseitig offene Systeme}
-%
-	\setlength{\abovedisplayskip}{-20pt} % todo WARUM IST HIER MEHR INDENT #@$%^*&$#%@%!!! Wegen flushleft oben?
-		\[ \arraycolsep=2em % \def\arraystretch{2}
-		\begin{array}{lll}
-			\text{Einströmung -- ideales Gas:} &  T_2 = T_1\ \dfrac{\kappa}{1+\dfrac{p_1}{p_u}(\kappa-1)}  &  \Delta m = \dfrac{m_1\ (T_2-\ T_1)}{\kappa\ T_1-\ T_2}  \\
-			\text{Einsaugen, Ausstoßen:}       &  \Delta W_v = -p\ \Delta V                                &
-		\end{array} \]
+	\skipabove{-20pt}
+	\[ \arraycolsep=1em  \def\arraystretch{1.1} %da ist irgendwas faul mit dem array, colsep nicht ändern damit indent passt, sonst verschiebt er sich
+	\begin{array}{lll}
+		\text{Einströmung -- ideales Gas:} &  T_2 = T_1\ \dfrac{\kappa}{1+\dfrac{p_1}{p_u}(\kappa-1)}  &  \Delta m = \dfrac{m_1\ (T_2-\ T_1)}{\kappa\ T_1-\ T_2}  \\
+		\text{Einsaugen, Ausstoßen:}       &  \Delta W_v = -p\ \Delta V                                &
+	\end{array} \]
 
 \subsection{Ruhende, stationäre, 2-seitig offene Systeme}
 %
-	\setlength{\abovedisplayskip}{-20pt}
-	\[\arraycolsep=2em
-		\begin{array}{lll}
-			\Delta h + \Delta e_a = \Delta q_a + \Delta w_i & \Delta h = \Delta q_a + \Delta q_R + \int v\ \dd p & \int v\ \dd p + \Delta q_R + \Delta e_a = \Delta w_i
-		\end{array} \]
+	\skipabove{-20pt}
+	\[ \arraycolsep=2em
+	\begin{array}{lll}
+		\Delta h + \Delta e_a = \Delta q_a + \Delta w_i & \Delta h = \Delta q_a + \Delta q_R + \int v\ \dd p & \int v\ \dd p + \Delta q_R + \Delta e_a = \Delta w_i
+	\end{array} \]
 \subsection{Wirkungsgrade}
 %
-	\setlength{\abovedisplayskip}{-25pt}
-		\[ \arraycolsep=1em \def\arraystretch{2}
-		\begin{array}{lllll}
-			\text{Verdichtung:}      & \eta_{is} = \dfrac{\Delta w_{s=konst.}}{\Delta w_i} & \eta_{it} = \dfrac{\Delta w_{T=konst.}}{\Delta w_i} & \eta_a    = \dfrac{\Delta w_i}{\Delta w_{\eff}} & \eta_{\eff} = \eta_i \ \eta_a \\
-			\text{Entspannung:}      & \eta_{is} = \dfrac{\Delta w_i}{\Delta w_{s=konst.}} & \eta_{it} = \dfrac{\Delta w_i}{\Delta w_{T=konst.}} & \eta_a    = \dfrac{\Delta w_{\eff}}{\Delta w_i} & \eta_{\eff} = \eta_i \ \eta_a \\
-			\text{Wärmeübertragung:} & \eta_{wue} = \dfrac{\dot{Q}}{\dot{Q}_{max}}         &                                                     &                                                &
-		\end{array} \]
+	\skipabove{-25pt}
+	\[ \arraycolsep=1em \def\arraystretch{2}
+	\begin{array}{lllll}
+		\text{Verdichtung:}      & \eta_{is} = \dfrac{\Delta w_{s=konst.}}{\Delta w_i} & \eta_{it} = \dfrac{\Delta w_{T=konst.}}{\Delta w_i} & \eta_a    = \dfrac{\Delta w_i}{\Delta w_{\eff}} & \eta_{\eff} = \eta_i \ \eta_a \\
+		\text{Entspannung:}      & \eta_{is} = \dfrac{\Delta w_i}{\Delta w_{s=konst.}} & \eta_{it} = \dfrac{\Delta w_i}{\Delta w_{T=konst.}} & \eta_a    = \dfrac{\Delta w_{\eff}}{\Delta w_i} & \eta_{\eff} = \eta_i \ \eta_a \\
+		\text{Wärmeübertragung:} & \eta_{wue} = \dfrac{\dot{Q}}{\dot{Q}_{max}}         &                                                     &                                                &
+	\end{array} \]
 
 \subsection{Ruhende, stationäre, 3-seitig offene Systeme}
 %
-	\setlength{\abovedisplayskip}{-15pt}
+	\skipabove{-15pt}
 	\[ \arraycolsep=1em \def\arraystretch{1}
-		\setlength{\tabcolsep}{1em} % for the horizontal padding
-		\begin{array}{ll}
-			\text{Mischung der Ströme i:} &  \sum m_i\ \Delta h_i = 0
-		\end{array} \]
+	\begin{array}{ll}
+		\text{Mischung der Ströme i:} &  \sum m_i\ \Delta h_i = 0
+	\end{array} \]
 
 \subsection{Ruhende, stationäre, 4-seitig offene Systeme}
 	%
-	\setlength{\abovedisplayskip}{-15pt}
+	\skipabove{-15pt}
 	\[ \arraycolsep=1em \def\arraystretch{1.2}
-		\begin{array}{lll}
-			\text{Wärmeübertrager:}      & \sum m_i\ \Delta h_i = 0 &                                 \\
-			\text{Verdichter + Turbine:} & P_{vi} + P_{T,\eff} = 0  & \text{montiert auf einer Welle}
-		\end{array} \]
+	\begin{array}{lll}
+		\text{Wärmeübertrager:}      & \sum m_i\ \Delta h_i = 0 &                                 \\
+		\text{Verdichter + Turbine:} & P_{vi} + P_{T,\eff} = 0  & \text{montiert auf einer Welle}
+	\end{array} \]
 
 \subsection{Kreisprozesse}
 %
-	\setlength{\abovedisplayshortskip}{-25pt}
+	\skipabove{-25pt}
 	\[ \arraycolsep=1em \def\arraystretch{1.8}
-		\begin{array}{llll}
-			\text{Allgemein:} & \eta_{therm} = \dfrac{\abs{\Delta w_{ab}}} {\Delta q_{zu}} & \text{EER} = \dfrac{\Delta q_{zu}}{\Delta w_{zu}}    & \text{COP} = \dfrac{\abs{\Delta w_{ab}}}{\Delta w_{zu}} \\
-			\text{Carnot:}    & \eta_{therm} = 1- \dfrac{T_{ab}}{T_{zu}}                   & \text{EER} = \dfrac{T_{zu}}{T_{ab} - T_{zu}}         & \text{COP} = \dfrac{T_{ab}}{T_{ab} - T_{zu}}            \\
-			\text{Joule:}     & \eta_{therm,max} = 1 - \dfrac{T_1}{T_2}                    &                                                      &                                                         \\
-			\text{Gütegrad:}  & \eta_G = \dfrac{\mathrm{EER}}{\mathrm{EER}_{Carnot}}       & \eta_G = \dfrac{\mathrm{COP}}{\mathrm{COP}_{Carnot}} &
-		\end{array} \]
+	\begin{array}{llll}
+		\text{Allgemein:} & \eta_{therm} = \dfrac{\abs{\Delta w_{ab}}} {\Delta q_{zu}} & \text{EER} = \dfrac{\Delta q_{zu}}{\Delta w_{zu}}    & \text{COP} = \dfrac{\abs{\Delta w_{ab}}}{\Delta w_{zu}} \\
+		\text{Carnot:}    & \eta_{therm} = 1- \dfrac{T_{ab}}{T_{zu}}                   & \text{EER} = \dfrac{T_{zu}}{T_{ab} - T_{zu}}         & \text{COP} = \dfrac{T_{ab}}{T_{ab} - T_{zu}}            \\
+		\text{Joule:}     & \eta_{therm,max} = 1 - \dfrac{T_1}{T_2}                    &                                                      &                                                         \\
+		\text{Gütegrad:}  & \eta_G = \dfrac{\mathrm{EER}}{\mathrm{EER}_{Carnot}}       & \eta_G = \dfrac{\mathrm{COP}}{\mathrm{COP}_{Carnot}} &
+	\end{array} \]
 
 \subsection{Exergie}
-
-	\hspace{3cm}
-	\setlength{\abovedisplayshortskip}{-20pt}
+	\skipabove{-20pt}
 	\[ \arraycolsep=1em \def\arraystretch{1.3}
-		\begin{array}{ll}
-			\text{Arbeit:}                     & e = \Delta w_{\eff}                                                                                             \\
-			\text{Geschlossenes System:}       & e = u - u_u - T_u\ (s-s_u) - p_u\ (v_u-v)                                                                       \\
-			\text{Fluid Strom}:                & e = h - h_u - T_u\ (s-s_u)                                                                                      \\
-			\text{Wärme:}                      & e = \mathlarger{\int} \left(1-\dfrac{T_u}{T} \right) \dd q_a  \cong \left(1-\dfrac{T_u}{T_m} \right) \Delta q_a \\
-			\text{Exergetischer Wirkungsgrad:} & \zeta = \dfrac{e_{ab}}{e_{zu}}
-		\end{array} \]
+	\begin{array}{ll}
+		\text{Arbeit:}                     & e = \Delta w_{\eff}                                                                                             \\
+		\text{Geschlossenes System:}       & e = u - u_u - T_u\ (s-s_u) - p_u\ (v_u-v)                                                                       \\
+		\text{Fluid Strom}:                & e = h - h_u - T_u\ (s-s_u)                                                                                      \\
+		\text{Wärme:}                      & e = \mathlarger{\int} \left(1-\dfrac{T_u}{T} \right) \dd q_a  \cong \left(1-\dfrac{T_u}{T_m} \right) \Delta q_a \\
+		\text{Exergetischer Wirkungsgrad:} & \zeta = \dfrac{e_{ab}}{e_{zu}}
+	\end{array} \]

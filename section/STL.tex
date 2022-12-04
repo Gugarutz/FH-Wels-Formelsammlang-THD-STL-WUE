@@ -9,30 +9,27 @@
 	Dazu gehört auch die THD Formelsammlung. Notiz: $ \text{rho} = \varrho \neq p = \text{Druck}, \ \text{nü} = \nu \neq v  $
 
 \subsection{Hydrostatik}
-	$ i $ kennzeichnet eine beliebige Richtung z.B. $ x,\, y,\, z $ oder die Richtung einer schrägen Wand $ s $
 
-	$ S $ kennzeichnet den Schwerpunkt
-
-	\begin{center}
+	\begin{flushleft}
 		\setlength{\tabcolsep}{1.5em} % for the horizontal padding
+		{\renewcommand{\arraystretch}{1.5}
 		\begin{tabular}{ll}
-			  Druckgradient: $ \dfrac{\partial p}{\partial x_i} =  \varrho\ f_i$
-			& Für $ f_z = g $ ist der Überdruck $ p_{\ue(z)} =  \varrho\ g\ z \quad \ g,\, z \downarrow$
-			\\
-			  Exzentrizität:       $ e_{Si} = \dfrac{I_{Si}}{s_{Si} \ A}$
-			& Vertikale Wandkraft: $ F_{wi} = p_{\ue,S} \ A_i $
-			\\
-			  \multicolumn{2}{l}{$ s_{Si} $ Lage des Flächenschwerpunkts $ S $ von Oberfläche in Richtung $ i $}
-			\\
-			  \multicolumn{2}{l}{$ I_{Si} $ Flächenträgheitsmoment in Richtung $ i $ um horizontale Achse durch Schwerpunkt $ S $ }
-			\\
-			  \multicolumn{2}{l}{Horizontale Wandkraft 	$ F_{wz} $ = Gewicht des darüberliegenden Fluids}
+			\multicolumn{2}{l}{$ i $ kennzeichnet eine beliebige Richtung z.B. $ x,\, y,\, z $ oder die Richtung einer schrägen Wand $ s $}                                  \\
+			\multicolumn{2}{l}{$ S $ kennzeichnet den Schwerpunkt}                                                                                                           \\
+			Druckgradient: $ \dfrac{\partial p}{\partial x_i} =  \varrho\ f_i$ & Für $ f_z = g $ ist der Überdruck $ p_{\ue(z)} =  \varrho\ g\ z \quad \ g,\, z \downarrow $ \\
+			Exzentrizität:       $ e_{Si} = \dfrac{I_{Si}}{s_{Si} \ A}$        & Vertikale Wandkraft: $ F_{wi} = p_{\ue,S} \ A_i $                                           \\
+			\multicolumn{2}{l}{$ s_{Si} $ Lage des Flächenschwerpunkts $ S $ von Oberfläche in Richtung $ i $}                                                               \\
+			\multicolumn{2}{l}{$ I_{Si} $ Flächenträgheitsmoment in Richtung $ i $ um horizontale Achse durch Schwerpunkt $ S $ }                                            \\
+			\multicolumn{2}{l}{Horizontale Wandkraft 	$ F_{wz} $ = Gewicht des darüberliegenden Fluids}
 		\end{tabular}
-	\end{center}
-
+		}
+	\end{flushleft}
+%
+	\vspace{-0.8cm}
+%
 	\begin{center}
-		\setlength{\tabcolsep}{1em} % for the horizontal padding
-		{\renewcommand{\arraystretch}{2}
+		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+		{\renewcommand{\arraystretch}{1.7}
 		\begin{tabular}{llll}
 			Rechteckiger Deckel mit Breite a, Höhe b:              & $ I_{Ss} = \dfrac{a\ b^3}{12} $  & $ A = a \ b $                                             & $ e_{Ss} = \dfrac{b^2}{12\ s_{Ss}} $            \\
 			Kreisförmiger Deckel mit Radius r:                     & $ I_{Ss} = \dfrac{r^4\ \pi}{4} $ & $ A = r^2 \ \pi $                                         & $ e_{Ss} = \dfrac{r^2}{4\ s_{Ss}} $             \\
@@ -42,47 +39,43 @@
 			\qquad Spiegeloberfläche                               & \multicolumn{2}{l}{ Neigung $ \alpha = \arctan \dfrac{a}{g} $}                               & $ z_{(x)} = z_0 - \dfrac{a}{g} x $              \\
 			Rotierend beschleunigte Flüssigkeiten:                 & \multicolumn{2}{l}{$ p_{\ue(r,z)} = \dfrac{\varrho}{2}\ r^2\ \omega - \varrho\ g\ (z-z_0) $} & $ z_0 = h_0 - \dfrac{I_p\ \omega^2}{2\ g\ A} $  \\
 			\qquad Spiegeloberfläche                               & \multicolumn{2}{l}{$ I_p = I_{pS} + r_S^2\ A $}                                              & $ z_{(r)} = z_0 + \dfrac{r^2\ \omega^2}{2\ g} $ \\
-			$ I_{pS} $ polare Trägheitsmoment um Schwerpunkt $ S $ & \multicolumn{3}{l}{$ r_S $ ist der Abstand vom Schwerpunkt zur Drehachse}
+			 \multicolumn{4}{l}{$ I_{pS} $ polare Trägheitsmoment um Schwerpunkt $ S $ \quad $ r_S $ ist der Abstand vom Schwerpunkt zur Drehachse}
 		\end{tabular}
 		}
 	\end{center}
 
 \subsection{Aerostatik}
-	\begin{center}
-		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
-		\begin{tabular}{llll}
-			  Standardatmosphäre n = $ \num{1.235} $
-			& $ p_0 = \qty{1}{atm} = \qty{101325}{\Pa} $
-			& $ T_0 = \qty{15}{\degreeCelsius} = \qty{288,15}{\K} $
-			& $ H_0 = \qty{8430}{\m} $
-			\\
-			  $ \dfrac{p_{(z)}}{p_0} = \left( 1 - \dfrac{n-1}{n}  \dfrac{z}{H_0} \right) ^{\dfrac{n}{n-1}} $
-			& $ \dfrac{T_{(z)}}{T_0} = \left( 1 - \dfrac{n-1}{n}  \dfrac{z}{H_0} \right) $
-			& $ \dfrac{\varrho_{(z)}}{\varrho_0} = \left( 1 - \dfrac{n-1}{n}  \dfrac{z}{H_0} \right) ^{\dfrac{1}{n-1}} $
-			&
-		\end{tabular}
-	\end{center}
+	\skipabove{-10pt}
+	\[
+		\text{Standardatmosphäre } \nn =  \num{1.235}
+		\qquad  \po = \qty{1}{atm} = \qty{101325}{\Pa}
+		\qquad  \To = \qty{15}{\degreeCelsius} = \qty{288,15}{\K}
+		\qquad  \Ho = \qty{8430}{\m}
+	\]
+	\[
+	  		   \dfrac{p_{(z)}}{\po} = \left( 1 - \dfrac{\nn-1}{\nn}  \dfrac{z}{\Ho} \right) ^{\dfrac{\nn}{\nn-1}}
+	 	\qquad \dfrac{T_{(z)}}{\To} = \left( 1 - \dfrac{\nn-1}{\nn}  \dfrac{z}{\Ho} \right)
+	  	\qquad \dfrac{\varrho_{(z)}}{\varrho_0} = \left( 1 - \dfrac{\nn-1}{\nn}  \dfrac{z}{\Ho} \right) ^{\dfrac{1}{\nn-1}}
+	\]
 
 \subsection{Massenbilanz MB}
-	\begin{center}
-		\setlength{\tabcolsep}{2em} % for the horizontal padding
-		\begin{tabular}{llll}
-			$ \sum \dot{m}_{ein} - \sum \dot{m}_{aus} = 0$ & $ \dot{m} = \varrho\ \dot{V} $ & $ \dot{V} = A\ c $ & $ c \perp A $
-		\end{tabular}
-	\end{center}
+	\skipabove{-15pt}
+	\[
+		\sum \dot{m}_{ein} - \sum \dot{m}_{aus} = 0
+		\qquad  \dot{m} = \varrho\ \dot{V}
+		\qquad  \dot{V} = A\ c
+		\qquad  c \perp A
+ 	\]
 
 \subsection{Energiebilanz EB, siehe auch THD}
-	\begin{center}
-		\setlength{\tabcolsep}{2em} % for the horizontal padding
-		\begin{tabular}{ll}
-			  $ \Delta h + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta q_a + \Delta w_i $
-			& $ \Delta h = \Delta q_a + \Delta q_R + \int v\ \dd p $
-			\\
-			  $ \int v\ \dd p + \Delta q_R + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta w_i $
-			& Inkompressibel: $ \dfrac{\Delta p}{\varrho} + \Delta q_R + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta w_i $
-		\end{tabular}
-	\end{center}
-%
+	\skipabove{-15pt}
+	\[ \arraycolsep=0em\def\arraystretch{1.7}
+	\begin{array}{l p{4em} l}
+		\Delta h + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta q_a + \Delta w_i     & & \Delta h = \Delta q_a + \Delta q_R + \int v\ \dd p                                                         \\
+		\int v\ \dd p + \Delta q_R + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta w_i& & \text{Inkompressibel: } \dfrac{\Delta p}{\varrho} + \Delta q_R + \Delta \dfrac{c^2}{2} + g\ \Delta z = \Delta w_i
+	\end{array} \]
+
+\clearpage
 \subsection{Impulsmomentenbilanz um Achse \textit{i} $\mathbf{IB_i}$ }
 	$ c_i $ ist die Geschwindigkeitskomponente in Richtung $ i $ (relativ zum bewegten Kontrollvolumen)
 %
@@ -320,7 +313,7 @@
 	\[\arraycolsep=0.2em \def\arraystretch{1.7}
 	\begin{array}{lrlll}
 		\text{Schallgeschwindigkeit:} & a = \sqrt{\dfrac{E}{\varrho}} & \text{\qquad} & \text{Flüssigkeit in elastischen Rohren:} & a = \dfrac{\sqrt{\dfrac{E}{\varrho}}} {\sqrt{1+ \dfrac{d\ E}{s\ E_R}}} \\
-		\text{Joukowski Stoß:}        & \Delta p = \varrho\ a\ c      & \text{\qquad} & \text{Empfohlene Schließzeit:}            & \Delta t > 3 \dfrac{2\ L}{A}
+		\text{Joukowski Stoß:}        & \Delta p = \varrho\ a\ c      & \text{\qquad} & \text{Empfohlene Schließzeit:}            & \Delta t > 3\, \dfrac{2\ L}{A}
 	\end{array} \]
 
 \subsection{Gas-Flüssig Strömung}
@@ -354,3 +347,14 @@
 		\text{\quad} &
 	\end{array} \]
 
+\section{Erweiterungen zu Laval-Düse}
+	Index $ a \dots $ Auslass;  $ k \dots $ kritischer/engster Querschnitt;  $ \alpha $ Winkel der Düse, bezogen auf Strömungsrichtung
+
+	\skipabove{0pt}
+	\[
+		\dfrac{A_a}{A_k} = \dfrac{1}{\Mach}  \left[ 1 + \dfrac{\kappa - 1}{\kappa + 1} \left( \Mach^2 -1 \right) \right] ^{\dfrac{\kappa + 1}{2\ (\kappa - 1)}}
+		\qquad
+		L = \dfrac{D_a - D_k}{2 \tan\alpha}
+		\qquad
+		\Psi
+	\]
