@@ -1,5 +1,6 @@
 % !TeX spellcheck = de_DE
 % Bitte benutze TexLive und TexStudio
+% github:
 
 \documentclass[	a4paper
 				,11pt
@@ -17,21 +18,24 @@
 	%\ihead[]{\headmark}			% auto assign even and odd to left and right resp
 	\cfoot[]{\pagemark}			% pagenumber
 
-
 \usepackage[ngerman]{babel}   	% Deutsche Einstellungen
 \usepackage[utf8]{inputenc}  	% utf-8 Eingabe
 \usepackage[T1]{fontenc}      	% Korrekte Behandlung von Sonderzeichen in der Ergebnis PDF-Datei.
 \usepackage{csquotes}         	% Für Anführungsstriche
+\usepackage{lmodern} 			% schriftart
+
+% Mathe
 \usepackage{mathtools}			% loads amsmath
 \usepackage{relsize,exscale}	% sizing
-\usepackage{array}
+\usepackage{array}				% MAthematische Tabellen
 \usepackage{xfrac,nicefrac}
+
+% formatierung und spacing
 \usepackage{multirow} 			% Zellenübergreifende reihen und Spalten
 \usepackage[nodisplayskipstretch]{setspace}
 	\onehalfspacing
+	\renewcommand{\arraystretch}{1.2} % Reihen seperation global
 \usepackage{indentfirst} 		% indents first paragraph
-
-\usepackage{lmodern}
 
 \usepackage{geometry}
 	\geometry{	a4paper,
@@ -48,19 +52,20 @@
 	\graphicspath{{graphics/}}
 	\usepackage{subcaption}
 
-\usepackage{siunitx}
+\usepackage{siunitx}			% einheiten
 	\sisetup{	locale = DE, 			% localisation
 				per-mode=fraction,	    % display as fractions
 				fraction-function=\dfrac,
 				separate-uncertainty}	% uncertainty as plus minus not a bracket
 
+% alles recht sinnlos da kein \maketitle
 \title{Formelsammlungen}
 \author{Georg Aichinger, Demid Ermak}
-\date{November 2022}
+\date{November 2022}	% da hat es angefangen
 
-\renewcommand{\arraystretch}{1.2} % Reihen seperation global
 
-%new commands Math
+
+% Math
 	\newcommand{\dd}{{\operatorname{d\!l}}}
 	\newcommand{\imag}{\mathrm{i}}
 	\newcommand{\eul}{\mathrm{\textbf{e}}}
@@ -70,9 +75,11 @@
 	\newcommand{\Cone}{\mathrm{C_1}}
 	\newcommand{\Ctwo}{\mathrm{C_2}}
 	\newcommand{\Cs}{\mathrm{C_s}}
-	\newcommand{\COT}{\mathrm{C_{12}}}
 
-%Text
+% Kontrolle des skips über displaymath
+	\newcommand*{\skipabove}[1]{\setlength{\abovedisplayskip}{#1} \setlength{\abovedisplayshortskip}{#1}}
+
+% Textersetzung
 	\newcommand{\ue}{\ddot{u}} % einfaches ü nicht verwenden, da nicht kursiv
 	\newcommand{\oum}{\ddot{o}}
 	\newcommand{\aum}{\ddot{a}}
@@ -102,8 +109,11 @@
 	\newcommand{\Stro}{\operatorname{\mathit{S\kern-.07em r}}} % http://de.wikipedia.org/wiki/Strouhal-Zahl
 	\newcommand{\Webe}{\operatorname{\mathit{W\kern-.30em e}}} % http://de.wikipedia.org/wiki/Weber-Zahl
 
-\usepackage{showframe}			% shows frames around margin, head, foot, etc;
-%\includeonly{THD}
+\usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
+% \includeonly{	THD,		%nach belieben wählen
+%				STL,
+%				WUE
+%			}
 
 \begin{document}
 	\include{section/THD}

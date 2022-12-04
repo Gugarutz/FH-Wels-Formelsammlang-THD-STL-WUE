@@ -1,32 +1,32 @@
 % !TeX spellcheck = de_DE
-\setcounter{section}{1} % Somit ist STL immer 2.x auch ohne THD 
+\setcounter{section}{1} % Somit ist STL immer 2.x auch ohne THD
 %	\setlength{\abovedisplayskip}{0pt}
 %	\setlength{\belowdisplayskip}{0pt}
 %	\setlength{\abovedisplayshortskip}{0pt}
 %	\setlength{\belowdisplayshortskip}{0pt}
-		
+
 \section{Strömungslehre}
 	Dazu gehört auch die THD Formelsammlung. Notiz: $ \text{rho} = \varrho \neq p = \text{Druck}, \ \text{nü} = \nu \neq v  $
 
 \subsection{Hydrostatik}
 	$ i $ kennzeichnet eine beliebige Richtung z.B. $ x,\, y,\, z $ oder die Richtung einer schrägen Wand $ s $
-	
+
 	$ S $ kennzeichnet den Schwerpunkt
-	
+
 	\begin{center}
 		\setlength{\tabcolsep}{1.5em} % for the horizontal padding
 		\begin{tabular}{ll}
-			  Druckgradient: $ \dfrac{\partial p}{\partial x_i} = \rho f_i$ 
-			& Für $ f_z = g $ ist der Überdruck $ p_{\ue(z)} = \rho g z \quad \ g,\, z \downarrow$
+			  Druckgradient: $ \dfrac{\partial p}{\partial x_i} =  \varrho\ f_i$
+			& Für $ f_z = g $ ist der Überdruck $ p_{\ue(z)} =  \varrho\ g\ z \quad \ g,\, z \downarrow$
 			\\
 			  Exzentrizität:       $ e_{Si} = \dfrac{I_{Si}}{s_{Si} \ A}$
-			& Vertikale Wandkraft: $ F_{Wi} = p_{\ue,S} \ A_i $
+			& Vertikale Wandkraft: $ F_{wi} = p_{\ue,S} \ A_i $
 			\\
 			  \multicolumn{2}{l}{$ s_{Si} $ Lage des Flächenschwerpunkts $ S $ von Oberfläche in Richtung $ i $}
 			\\
 			  \multicolumn{2}{l}{$ I_{Si} $ Flächenträgheitsmoment in Richtung $ i $ um horizontale Achse durch Schwerpunkt $ S $ }
 			\\
-			  \multicolumn{2}{l}{Horizontale Wandkraft 	$ F_{Wz} $ = Gewicht des darüberliegenden Fluids}
+			  \multicolumn{2}{l}{Horizontale Wandkraft 	$ F_{wz} $ = Gewicht des darüberliegenden Fluids}
 		\end{tabular}
 	\end{center}
 
@@ -83,9 +83,9 @@
 		\end{tabular}
 	\end{center}
 %
-\subsection{Impulsbilanz in Richtung \textit{i} $\mathbf{IB_i}$ }
+\subsection{Impulsmomentenbilanz um Achse \textit{i} $\mathbf{IB_i}$ }
 	$ c_i $ ist die Geschwindigkeitskomponente in Richtung $ i $ (relativ zum bewegten Kontrollvolumen)
-%	
+%
 	\begin{center}
 		\setlength{\tabcolsep}{0.65em} % for the horizontal padding
 		\begin{tabular}{lllll}
@@ -99,9 +99,9 @@
 
 \subsection{Impulsbilanz in Richtung \textit{i} $\mathbf{IB_i}$ }
 	$ c_n $ ist die Geschwindigkeit projiziert auf die Normalebene der Achse $ i $
-	
+
 	$ r_i $ ist der Hebelarm zur Achse $ i $ in der Normalebene der Achse $ i $
-%	
+%
 	\begin{center}
 		\setlength{\tabcolsep}{0.4em} % for the horizontal padding
 		\begin{tabular}{lllll}
@@ -115,91 +115,91 @@
 
 \subsection{Isentrope kompressible Strömungen}
 	Isentrope, ideales Gas, Isentropen-Koeffizient $\kappa$: Siehe THD Formelsammlung
-	
+
 	Index $ T $ kennzeichnet totale Bedingungen bzw. Ruhebedingungen bei $ c = 0 $
-	
+
 	Index $ k $ kennzeichnet kritische Bedingungen bei Schallgeschwindigkeit $ c = a $
-	
+
 	Index $ u $ kennzeichnet Umgebungsbedingungen
 %
-	\setlength{\abovedisplayskip}{0pt}
+	\skipabove{0pt}
 		\[ \arraycolsep=2em\def\arraystretch{2}
 		\begin{array}{ll}
-			  \text{Geschwindigkeitsfunktion }  \nu & \text{Durchflussfunktion }  \psi 
+			  \text{Geschwindigkeitsfunktion }  \nu & \text{Durchflussfunktion }  \psi
 			\\
-			   \nu_{(\frac{p}{p_T},\kappa)} = 
+			   \nu_{(\frac{p}{p_T},\kappa)} =
 			  	\sqrt{\dfrac{\kappa}{\kappa-1}
 			  		\left[1 -
 			  			\left(\dfrac{p}{p_T}\right)
 			  				^{\frac{\kappa-1}{\kappa}}
-			  		\right]} 
-			&  \psi_{(\frac{p}{p_T},\kappa)} = 
+			  		\right]}
+			&  \psi_{(\frac{p}{p_T},\kappa)} =
 				\sqrt{ \dfrac{\kappa}{\kappa-1}
 					\left[
-						\left(\dfrac{p}{p_T}\right) 
-							^{\frac{2}{\kappa}} 
-							- 
+						\left(\dfrac{p}{p_T}\right)
+							^{\frac{2}{\kappa}}
+							-
 						\left(\dfrac{p}{p_T}\right)
 							^{\frac{\kappa+1}{\kappa}}
-					\right]} 
+					\right]}
 			\\
-			  \text{EB: } c = \displaystyle\sqrt{2\ R\ T_T} \cdot \nu_{(\nicefrac{p}{p_T},\kappa)} 
-			& \text{MB: } \dot{m} = A\ \varrho_T\ \displaystyle\sqrt{2\ R\ T_T} \cdot \psi_{(\nicefrac{p}{p_T},\kappa)} 
+			  \text{EB: } c = \displaystyle\sqrt{2\ R\ T_T} \cdot \nu_{(\nicefrac{p}{p_T},\kappa)}
+			& \text{MB: } \dot{m} = A\ \varrho_T\ \displaystyle\sqrt{2\ R\ T_T} \cdot \psi_{(\nicefrac{p}{p_T},\kappa)}
 		\end{array}\]
 %
-	\setlength{\abovedisplayshortskip}{0pt}
-	\[ 
-		\dfrac{p_k}{p_T} = 
+	\skipabove{0pt}
+	\[
+		\dfrac{p_k}{p_T} =
 			\left(\dfrac{2}{\kappa+1}\right)
 				^{\frac{\kappa}{\kappa-1}}
 	\quad
 		\nu_k = \sqrt{\dfrac{\kappa}{\kappa+1}}
 	\quad
-		\psi_k = \psi_{max} = 
+		\psi_k = \psi_{max} =
 			\sqrt{\dfrac{\kappa}{\kappa+1}}
 			\left(\dfrac{2}{\kappa+1}\right)
 				^{\frac{1}{\kappa-1}}
 	\quad
 		\dfrac{T_k}{T_T} = \dfrac{2}{\kappa + 1}
-	\quad	
-		\dfrac{\varrho_k}{\varrho_T} = 
+	\quad
+		\dfrac{\varrho_k}{\varrho_T} =
 			\left(\dfrac{2}{\kappa+1}\right)
 				^{\frac{1}{\kappa-1}}
 	 \]
-%	 
-	\[ 
+%
+	\[
 		c_k = a_k = \sqrt{\kappa \ R\ T_k}
 	\qquad
-		\text{Schallgeschwindigkeit }
+		\text{Schallgeschwindigkeit: }
 		a = \sqrt{\dfrac{\dd p}{\dd\varrho}}
 			= \sqrt{\kappa \ R\ T}
 	\qquad
-		\text{Machzahl }
+		\text{Machzahl: }
 		\Mach = \dfrac{c}{a}
 	 \]
 
 	Der Druck am Auslass einer einfachen konvergenten Düse $ p_a = \max(p_u, p_k) $
-	
+
 	Für gegebene Ruhebedingungen ist der Druck am Auslass einer korrekt ausgelegten Laval Düse $ p_a = p_u  $
-%	
-	\setlength{\abovedisplayskip}{10pt}
+%
+	\skipabove{10pt}
 	\[ \arraycolsep=2em\def\arraystretch{2}
 	\begin{array}{ll}
-		\Mach  = 
+		\Mach  =
 		\sqrt{\dfrac{2}{\kappa-1}
 			\left[\left(
 				\dfrac{p}{p_T}
 				\right)
-					^{\frac{1-\kappa}{\kappa}} - 1
+					^{\frac{\kappa-1}{- \kappa}} - 1
 			\right]}
-		& 
-		\dfrac{p}{p_T}  = 
+		&
+		\dfrac{p}{p_T}  =
 			\left( 1 +
 				\dfrac{\kappa-1}{2}  \Mach^2
 			\right)
-				^{\frac{\kappa}{1-\kappa}}
+				^{\frac{- \kappa}{\kappa - 1}}
 	\\
-		\dfrac{\varrho}{\varrho_T}  = 
+		\dfrac{\varrho}{\varrho_T}  =
 		\left( \dfrac{p}{p_T} \right)
 			^{\frac{1}{\kappa}} =
 		\left( 1 +
@@ -207,7 +207,7 @@
 		\right)
 			^{\frac{1}{1-\kappa}}
 		&
-		\dfrac{T}{T_T}  = 
+		\dfrac{T}{T_T}  =
 		\left( \dfrac{p}{p_T} \right)
 			^{\frac{\kappa-1}{\kappa}} =
 		\left( 1 +
@@ -215,15 +215,15 @@
 		\right)
 			^{-1}
 	\end{array}\]
-	
+
 \subsection{Viskosität -- Wandschubspannung}
 	\begin{center}
 		\setlength{\tabcolsep}{2em} % for the horizontal padding
 		\begin{tabular}{ll}
-		      Dynamische Viskosität $ \mu \text{ in } \unit{\kg\per\m\per\s} \text{ bzw. } \unit{\Pa\s} $
-			& Kinematische Viskosität $ \nu = \dfrac{\mu}{\varrho} \text{ in } \unit{\m\squared \per\s\squared} $
+		      Dynamische Viskosität $ \mu \text{ in } \left[\unit{\kg\per\m\per\s}\right] \text{ bzw. } \left[\unit{\Pa\s}\right] $
+			& Kinematische Viskosität $ \nu = \dfrac{\mu}{\varrho} \text{ in } \left[\unit{\m\squared \per\s\squared}\right] $
 			\\
-			  Newton'sches Schubspannungsgesetz $ \tau_{\textsl{w}} = \mu \dfrac{\dd c}{\dd y} $ 
+			  Newton'sches Schubspannungsgesetz $ \tau_{\textsl{w}} = \mu \dfrac{\dd c}{\dd y} $
 			& $\gamma$ zeigt weg von der Wand.
 		\end{tabular}
 	\end{center}
@@ -234,9 +234,9 @@
 		\begin{array}{llll}
 			N\!P\!S\!H = \dfrac{p - p_d}{\varrho\ g} & \dot{V} = c_{(y \text{ oder } r)} \ \dd A                                                    & \text{Kanal: } \dd A = b\ \dd y                                          & \text{Rohr: } \dd A = r\ \dd r\ \dd\varphi \\
 			\text{Reynolds Zahl:}                    & \Reyn = \dfrac{\overline{c}\ L_{char}\ \varrho}{\mu} = \dfrac{\overline{c}\ L_{char}\ }{\nu} & L_{char} = d_h = \dfrac{4\ A}{U}                                         &                                             \\
-			\text{Reibung:}                          & \Delta q_R = \dfrac{\Delta p_v}{\varrho} = g\ \Delta h                                       & = \left(\xi_F + \lambda \dfrac{L}{d_h} \right) \dfrac{\overline{c}^2}{2} & \Delta p_v = R_{ges}\ \dot{V}^2             \\
-			\text{Widerstand:}                       & R_i = \dfrac{\varrho}{2}  \left(\xi_{Fi} + \lambda_i \dfrac{L_i}{d_{hi}}\right)              & \text{Seriell: } R_{ges} = \sum R_i  & \text{Parallel: } \dfrac{1}{R_{ges}} = \left[\sum\sqrt{\dfrac{1}{R_j}}\right]^2
-		\end{array} 
+			\text{Reibung:}                          & \Delta q_R = \dfrac{\Delta p_v}{\varrho} = g\ \Delta h                                       & = \left( \zeta_F + \lambda \dfrac{L}{d_h} \right) \dfrac{\overline{c}^2}{2} & \Delta p_v = R_{ges}\ \dot{V}^2             \\
+			\text{Widerstand:}                       & R_i = \dfrac{\varrho}{2}  \left( \zeta_{Fi} + \lambda_i \dfrac{L_i}{d_{hi}}\right)              & \text{Seriell: } R_{ges} = \sum R_i  & \text{Parallel: } \dfrac{1}{R_{ges}} = \left[\sum\sqrt{\dfrac{1}{R_j}}\right]^2
+		\end{array}
 	\]
 \subsection{Laminare Durchströmung}
 	$ \Reyn_{dh} < 2300 $ \quad	Rohrreibungsbeiwert $ \lambda = \dfrac{64}{\Reyn_{dh}} $ \qquad	Hydrodynamische Einlaufstrecke $ \dfrac{L_e}{d_h} = \num{0,06} \Reyn_{dh}  $
@@ -246,13 +246,13 @@
 		\text{Couette Strömung:} & \dfrac{c_{(y)}}{c_{max}} = \dfrac{y}{h}                                                            & c_{max} = konst.                                       & A = b\ h     & \overline{c} = \dfrac{1}{2} c_{max} \\
 		\text{Kanal Strömung:}   & \dfrac{c_{(y)}}{c_{max}} = 4 \left[\left(\dfrac{y}{h}\right) - \left(\dfrac{y}{h}\right)^2 \right] & c_{max} = \dfrac{1\ \Delta p_v\ h^2}{\mu\ \Delta L\ 8} & A = b\ h     & \overline{c} = \dfrac{2}{3} c_{max} \\
 		\text{Rohr Strömung:}    & \dfrac{c_{(r)}}{c_{max}} = 1 - \left(\dfrac{r}{R}\right)^2                                         & c_{max} = \dfrac{1\ \Delta p_v\ R^2}{\mu\ \Delta L\ 4} & A = R^2\ \pi & \overline{c} = \dfrac{1}{2} c_{max}
-	\end{array} 
+	\end{array}
 	\]
 \subsection{Turbulente Durchströmung}
 	$ \Reyn_{dh} > 4000 $ \quad	Rohrreibungsbeiwert $ \lambda $ aus Moody Diagr. \qquad	Hydrodynamische Einlaufstrecke $ \dfrac{L_e}{d_h} = \dfrac{8}{\sqrt{\lambda}}  $
-	
+
 	$ \nicefrac{1}{7} $ Potenzgesetz: $ \dfrac{c_{(r)}}{c_{max}} = 1 - \left(\dfrac{r}{R}\right)^{\nicefrac{1}{7}} $
-	
+
 \subsection{Strömungsmaschinen}
 %
 	\begin{center}
@@ -260,7 +260,7 @@
 		\begin{tabular}{lll}
 			Drehzahl $ \dot{n} $                     & \multicolumn{2}{l}{Winkelgeschwindigkeit $ \omega = 2\ \pi\ \dot{n} $}                              \\
 			Umfangsgeschwindigkeit $ u = r\ \omega $ & Relativgeschwindigkeit $ w $                       & Absolutgeschwindigkeit $ c $ \\
-			Index $ r $ steht für Radialkomponente   & \multicolumn{2}{l}{Index $ u $ steht für Umfangskomponente}            
+			Index $ r $ steht für Radialkomponente   & \multicolumn{2}{l}{Index $ u $ steht für Umfangskomponente}
 		\end{tabular}
 	\end{center}
 
@@ -275,16 +275,16 @@
 
 \subsection{Umströmung}
 	Umschlag von laminar auf turbulent bei $ \num{5e5} < \Reyn_{Lchar} < \num{1e6} $
-	
+
 	Widerstandskraft $ F_W = c_W \dfrac{\varrho_{fl}}{2} c_{rel}^2\ A $ \qquad $ c_{rel} = c_{\infty} - c_{K\oum rper}$
-	
+
 \subsection{Umströmung einer Platte}
 	Char. Länge $ L_{char} $ = Umströmte Plattenlänge $ L $ bzw. an der Stelle $ x $
-	
+
 	Bezugsfläche $ A = b\ L $ = Plattenoberfläche
-	
+
 	Einfluss der Rauigkeit: siehe Widerstandsdiagramm der Platte
-	
+
 	\[ \arraycolsep=1em\def\arraystretch{1.7}
 	\begin{array}{|l|r|c|c|}
 		\hline
@@ -295,20 +295,20 @@
 		\text{Wandschubspannung}  & \dfrac{\tau_{\textsl{w}}}{\varrho \cdot u^2_{\infty}}  = & \dfrac{0,332}{\sqrt{\Reyn_x}} & \dfrac{0,0296}{\sqrt[5]{\Reyn_x}}      \\ \hline
 		\text{Widerstandsbeiwert} & c_{\textsl{w}}                                         = & \dfrac{1,328}{\sqrt{\Reyn_l}} & \dfrac{0,074}{\sqrt[5]{\Reyn_l}}       \\ \hline
 	\end{array} \]
-	
+
 	\clearpage
 \subsection{Umströmung stumpfer Körper}
 	Char. Länge $ L_{char} $ = Hydraulischer Durchmesser der Schattenfläche in Strömungsrichtung
-	
+
 	Bezugsfläche $ A $ = Schattenfläche in Anströmrichtung
-	
+
 	Umströmungsgeschwindigkeit an dickster Stelle (Apex): Zylinder: $ c_{Apex}= 2\ c_{rel} $\quad Kugel: $ c_{Apex}= 1,5\ c_{rel}  $
 
 \subsection{Dynamischer Auftrieb}
-	Char. Länge $ L_{char} $ = Sehnenlänge des Profils $ L $	
-	
+	Char. Länge $ L_{char} $ = Sehnenlänge des Profils $ L $
+
 	Bezugsfläche $ A $ = Grundfläche des Profils bei Anstellwinkel $ \alpha = \qty{0}{\degree} $
-	
+
 	\[\arraycolsep=0.9em % for the horizontal padding
 		\begin{array}{llll}
 			\text{Dyn. Auftriebskraft }                          & \text{Kraft am Profilende}                           & \text{Nickmoment um Nase} & \text{Gleitzahl } \epsilon \text{ und Gleitwinkel } \gamma  \\
@@ -342,7 +342,7 @@
 			\Mach_2 = \dfrac{c_2}{a_2} = \sqrt{\dfrac{(\kappa-1) \Mach_1^2 + 2}{2\ \kappa\Mach_1^2 - (\kappa-1)}}                                  &     &  & \Delta s = s_2 - s_1 = c_p \ln\dfrac{T_2}{T_1} - R \ln\dfrac{p_2}{p_1}                          & >0  \\
 			\text{Neue Ruhebedingungen nach dem Stoß:}                                                                                             &     &  & \dfrac{p_2}{p_{T2}} = \left( 1+ \dfrac{\kappa -1}{2}\Mach_2^2\right) ^{\frac{\kappa}{1-\kappa}} &
 		\end{array} \]
-	
+
 \subsection{Schräger Verdichtungsstoß - Verdünnungswellen}
 	\setlength{\abovedisplayshortskip}{-15pt}
 	\[\arraycolsep=0.5em \def\arraystretch{2}

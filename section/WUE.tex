@@ -17,12 +17,10 @@
 		\dot{Q}  & = \dot{m}_K\ \Delta h_K                     & =  \dot{m}_K\ c_{p,K}\ \Delta T_H       & = \dot{W}_K\ \Delta T_K       &                   &  & \Delta T_K     & = T_{K2} - T_{K1}
 	\end{array} \]
 
-
-
 \subsection{Ebene Wände -- Platten}
-	$ A_{wa} = A_{wi} = A_{wj} = A_{w} = $ konst., Seitenflächen vernachlässigt 
-		\quad $ R_i = \dfrac{1}{\alpha_i} $ 
-		\quad $ R_{w,j} = \dfrac{\Delta x_j}{\lambda_j} $ 
+	$ A_{wa} = A_{wi} = A_{wj} = A_{w} = $ konst., Seitenflächen vernachlässigt
+		\quad $ R_i = \dfrac{1}{\alpha_i} $
+		\quad $ R_{w,j} = \dfrac{\Delta x_j}{\lambda_j} $
 		\quad $ R_a = \dfrac{1}{\alpha_a} $
 
 \subsection{Rohr -- Zylinderwände}
@@ -30,18 +28,18 @@
 		\qquad $ R_i = \dfrac{d_a}{d_i}   \dfrac{1}{\alpha_i}  $
 		\qquad $ R_{w,j} = \dfrac{d_a}{a} \dfrac{1}{\lambda_j} \ln\left( \dfrac{d_j}{d_{j-1}} \right) $
 		\qquad $ R_a = \dfrac{1}{\alpha_a} $
-		
+
 \subsection{Kugelwände}
 	$ A_{wa} = d_a^2\ \pi $
 		\qquad $ R_i = \left(\dfrac{d_a}{d_i}\right)^2 \dfrac{1}{\alpha_i} $
 		\qquad $ R_{w,j} = \dfrac{d_a^2}{2\ \lambda_j} \left(\dfrac{1}{d_{j-1}} - \dfrac{1}{d_{j}}\right) $
 		\qquad $ R_a = \dfrac{1}{\alpha_a} $
-		
-\subsection{Parallele Wandschichten}	
+
+\subsection{Parallele Wandschichten}
 	$ \dfrac{1}{R_w} = \displaystyle\sum_{N_{w(j)}}^{j=1}   \dfrac{1}{R_{w,j}} $
 		\qquad $ \dot{Q} = \dot{Q}_{w,j} =  \displaystyle\sum_{N_{w(j)}}^{j=1}   \dot{Q}_{w,j}$
 		\qquad $ R_{w,j} = R_{w,j,seriell}\ \dfrac{A_{wa}}{A_{wa,j}} $
-	
+
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}{0.24\textwidth}
@@ -67,12 +65,12 @@
 \subsection{Rippen}
 	$ \eta_{Ri} = \dfrac{\dot{Q}_{Ri}}{\dot{Q}_{Ri,max}} = \dfrac{\tanh(m\ h)}{m\ h} $
 		\qquad $ m = \sqrt{\dfrac{\alpha\ U}{\lambda_{Ri}\ A}} $
-%		\qquad 
-		
+%		\qquad
+
 	$ \dot{Q}_{Ri} = \lambda_{Ri}\ A_{Ri}\ \Delta T_0\ m \tanh(m\ h) $
 		\qquad  $ \Delta T_{(x)} = T_{(x)} - T_u = \Delta T_0\, \dfrac{\cosh\left(m\ h \left(1- \frac{x}{h}\right)\right)}{\cosh(m\ h)} $
-%		\qquad 
-		
+%		\qquad
+
 	$ \dfrac{A_{w,mit}}{A_{w,ohne}} = 1 - \dfrac{A_{Ri}}{A_{w,ohne}} + \dfrac{A_{w,Ri}}{A_{w,ohne}} $
 		\qquad\qquad $ \dfrac{\dot{Q}_{mit}}{\dot{Q}_{ohne}} = \dfrac{\alpha_{mit}}{\alpha_{ohne}} = 1 - \dfrac{A_{Ri}}{A_{w,ohne}}  + \dfrac{U_{Ri}}{A_{w,ohne}} \dfrac{\tanh(m\ h)}{m}$
 
@@ -86,13 +84,13 @@
 
 \subsection{Konvektion}
 	Durchströmung: $ L_{char} = d_h = \dfrac{4\ A}{U} $ \qquad Umströmung: $ L_{char} = L' = \dfrac{A_w}{U_{proj}}$
-	
+
 	$ \Reyn = \dfrac{c\ L_{char}}{\nu} $
 		\quad $ \Pran = \dfrac{\nu}{a} = \dfrac{\mu\ c_p}{\lambda} = \dfrac{\delta}{\delta_T} $
 		\quad $ \Rayl = \dfrac{g\ L_{char}\ \beta\ (T_w - T_{fl})}  {\nu\ a} $
 		\quad $ \Nuss = \dfrac{\alpha\ L_{char}}{\lambda} = \dfrac{L_{char}}{\delta_T} $
 		\quad $ \delta_T = \dfrac{\lambda}{\alpha} $
-		
+
 	$ \beta_{ideales~Gas} = \dfrac{1}{T_m} $
 		\qquad Stoffwerte der WUE bei $ T_m = \dfrac{T_w + T_{fl}}{2} $
 
@@ -103,12 +101,12 @@
 	\[ \arraycolsep=0.2em  \def\arraystretch{2}
 	\begin{array}{lrll}
 		\text{Laminar } \Reyn <2300: & \Nuss_{lam} & \multicolumn{2}{l}{ = \sqrt[3]{3,66^3 + 0,664^3\ \Pran \left(\Reyn \dfrac{d_h}{L}\right)^{\nicefrac{3}{2}}}}\\
-		\text{Turbulent } \Reyn>10^4: &\Nuss_{turb} & \multicolumn{2}{l}{ = \dfrac{\nicefrac{\xi}{8}\Reyn\Pran}{1 + 12,7 \sqrt{\nicefrac{\xi}{8}} \left( \Pran^{\nicefrac{2}{3}} - 1\right)} \ f_1 \ f_2 } \\
-		\xi = \left(1,8 \log(\Reyn) - 1,5\right)^{-2} & f_1 = 1 + \left(\dfrac{d_h}{L}\right)^{\nicefrac{2}{3}} & \quad f_{2,fl} = \left(\dfrac{\Pran}{\Pran_w}\right)^{0,11} &\quad f_{2,g} = \left(\dfrac{T}{T_w}\right)^{0,45} \\
+		\text{Turbulent } \Reyn>10^4: &\Nuss_{turb} & \multicolumn{2}{l}{ = \dfrac{\nicefrac{ \zeta}{8}\Reyn\Pran}{1 + 12,7 \sqrt{\nicefrac{ \zeta}{8}} \left( \Pran^{\nicefrac{2}{3}} - 1\right)} \ f_1 \ f_2 } \\
+		 \zeta = \left(1,8 \log(\Reyn) - 1,5\right)^{-2} & f_1 = 1 + \left(\dfrac{d_h}{L}\right)^{\nicefrac{2}{3}} & \quad f_{2,fl} = \left(\dfrac{\Pran}{\Pran_w}\right)^{0,11} &\quad f_{2,g} = \left(\dfrac{T}{T_w}\right)^{0,45} \\
 		\text{Übergang: } \gamma = \dfrac{\Reyn-2300}{10000-2300} &\Nuss & \multicolumn{2}{l}{= (1-\gamma)\cdot \Nuss_{lam,\Reyn=2300} + \gamma\cdot \Nuss_{turb,\Reyn=10000}}\\
 		\text{Ringspaltkorrektur: }&\Nuss_{Rs}& = \Nuss\ 0,86 \left(\dfrac{d_{aa}}{d_{ai}}\right)^{0,16}&
 	\end{array} \]
-	
+
 \subsubsection{Umströmung}
 	\setlength{\abovedisplayskip}{-20pt}
 	\[ \arraycolsep=0.2em  \def\arraystretch{2}
@@ -119,12 +117,12 @@
 		\multicolumn{2}{c}{f_{3,fl} =\left(\dfrac{\Pran}{\Pran_w}\right)^{0,25}} & \multicolumn{2}{c}{f_{2,g} = \left(\dfrac{T}{T_w}\right)^{0,121}}\\
 		\text{Übergang: } & 10<\Reyn<10^7 & \Nuss& = \sqrt{\Nuss_{lam}^2 + \Nuss_{turb}^2}
 	\end{array} \]
-	
+
 	\setlength{\abovedisplayskip}{-10pt}
 	\[ \arraycolsep=1em  \def\arraystretch{1.5}
 	\begin{array}{lll}
-		\text{Schräg umströmter Zylinder:} 
-			& \text{Korrekturfaktor } f_5 
+		\text{Schräg umströmter Zylinder:}
+			& \text{Korrekturfaktor } f_5
 			& \text{Längs umströmter Zylinder:} \\
 		 \Nuss = \Nuss_{Zylinder,\ang{90}} \ f_5
 			&  f_5 = ???
@@ -152,12 +150,12 @@
 	\includegraphics[width=0.9\textwidth]{FK-durchstroemung}
 
 \subsubsection{Umströmung}
-	Vertikale Wand: $ \Nuss = (0,825 + 0,387 \Rayl^{\sfrac{1}{6}} \ f_1) $ 
+	Vertikale Wand: $ \Nuss = (0,825 + 0,387 \Rayl^{\sfrac{1}{6}} \ f_1) $
 		\qquad\qquad $ f_1 = (1 + 0,671 \Pran^{\sfrac{-9}{16}}) ^{\sfrac{-8}{27}} $
-	
+
 	\vskip 0.2cm
 	Geneigte Wand, Winkel $ \alpha $ zur Vertikalen: \qquad ohne Ablösung: $ \Rayl_{\alpha} = \Rayl\ \cos\alpha $
-	
+
 	\setlength{\abovedisplayskip}{-10pt}
 	\[ \arraycolsep=0.7em  \def\arraystretch{1.4}
 	\begin{array}{llc}
@@ -219,7 +217,7 @@
 		\text{Übertragungseinheit}:          & N_i  =  \dfrac{k\ A_{wa}}{{\dot{m}}_i\ {cp}_i}                                                                                                                                                   \\
 		\text{Mittlere Temperaturdifferenz:} & \Delta T  =  T_H - T_K  =  \dfrac{\Delta T_a - \Delta T_b} {\ln\left( \dfrac{\Delta T_a}{\Delta T_b}\right)} = \dfrac{\Delta T_b - \Delta T_a} {\ln\left( \dfrac{\Delta T_b}{\Delta T_a}\right)} \\
 		\text{Mittlere Wandtemperaturen:}    & T_{wH}  =  T_H - \dfrac{k\ A_{wa}}{\alpha_H\ A_{wH}} \Delta T                                                                                                                                    \\
-		                                     & T_{wK}  =  T_K + \dfrac{k\ A_{wa}}{\alpha_K\ A_{wK}} \Delta T 
+		                                     & T_{wK}  =  T_K + \dfrac{k\ A_{wa}}{\alpha_K\ A_{wK}} \Delta T
 	\end{array} \]
 
 \subsection{Einseitig konstante Temperatur} \label{sec:einseitig-konst-T}
@@ -230,13 +228,13 @@
 
 \subsection{Vorgangsweise Auslegung}
 	\underline{Gegeben:} Geometrie außer Außen-Oberfläche, Einlass-Zustände beidseitig,
-	
+
 		\qquad \textbf{eine Ziel-Auslasstemperatur }
-	
+
 	\underline{Gesucht:} \textbf{Außenoberfläche der wärmeübertragenden Wand},
-	
+
 		\qquad davon abgeleitet Länge oder Rohranzahl etc.
-	
+
 	\begin{singlespace}
 	\underline{Berechnung:}
 		\begin{enumerate}
@@ -250,20 +248,20 @@
 		\item Stoffwerte beidseitig bei Mitteltemperatur zwischen Fluid und Wand
 		\item Wand-, heißer -, kalter -, Gesamt-Widerstand, Wärmedurchgangskoeffizient
 		\item Außenoberfläche der wärmeübertragenden Wand etc.
-		\item Aktualisierung der Wandtemperaturen 
-		\item Übereinstimmung mit angenommenen Wandtemperaturen? 
+		\item Aktualisierung der Wandtemperaturen
+		\item Übereinstimmung mit angenommenen Wandtemperaturen?
 		\begin{enumerate}
 			\item Ja $ \rightarrow $ OK
 			\item Nein $ \rightarrow $ zurück zu 4.
 		\end{enumerate}
 		\end{enumerate}
 	\end{singlespace}
-	
+
 \subsection{Vorgangsweise Betriebsnachrechnung}
 	\underline{Gegeben:} \textbf{vollständige Geometrie}, Einlass-Zustände beidseitig
-	
+
 	\underline{Gesucht:} \textbf{Auslasstemperaturen beidseitig}
-	
+
 	\begin{singlespace}
 		\underline{Berechnung: }
 		\begin{enumerate}
@@ -271,64 +269,63 @@
 			\item Annahme von k bzw. Übernahme von k aus Auslegung, iterative Aktualisierung:
 		\end{enumerate}
 	\end{singlespace}
-	
+
 \subsubsection{Einseitig konstante Temperatur }
 	\[ \Delta T_2 = \Delta T_1\ \eul^{-N}   \qquad N\dots \text{ siehe \ref{sec:einseitig-konst-T}} \]
 
 \subsubsection{Gleichstrom}
 	\setlength{\abovedisplayshortskip}{-5pt}
 	\[
-		T_{H2} =  T_{H1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)  
+		T_{H2} =  T_{H1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)
 		\qquad\qquad \mu = \dfrac{1}{\dot{W}_H} + \dfrac{1}{\dot{W}_K}
 	\]
 	\[
-		T_{K2} =  T_{K1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)  
+		T_{K2} =  T_{K1} - (T_{H1} - T_{K1})\, \dfrac{\dot{W}_K}{\dot{W}_H + \dot{W}_K} \left(1- \eul^{-\mu\ k\ A_{wa}}\right)
 	\]
 
 \subsubsection{Gegenstrom}
-	\[ 
+	\[
 		\mu  = \abs{\dfrac{1}{\dot{W}_H} - \dfrac{1}{\dot{W}_K}}
 	\]
-	\[ 
-		 T_{H2} =  T_{H1} - (T_{H1} - T_{K1})\, \dfrac{1-\ \eul^{-\mu\ k\ A_{wa}}}  {1- \dfrac{\dot{W}_H}{\dot{W}_K}\ \eul^{-\mu\ k\ A_{wa}}} 
+	\[
+		 T_{H2} =  T_{H1} - (T_{H1} - T_{K1})\, \dfrac{1-\ \eul^{-\mu\ k\ A_{wa}}}  {1- \dfrac{\dot{W}_H}{\dot{W}_K}\ \eul^{-\mu\ k\ A_{wa}}}
 		 \qquad\qquad
-		 T_{K2}  =  {T_{H1}} - (T_{H1} - T_{K1})\, \dfrac{1- \dfrac{\dot{W}_H}{\dot{W}_K}}  {1- \dfrac{\dot{W}_H}{\dot{W}_K}\ \eul^{-\mu\ k\ A_{wa}}}   
+		 T_{K2}  =  {T_{H1}} - (T_{H1} - T_{K1})\, \dfrac{1- \dfrac{\dot{W}_H}{\dot{W}_K}}  {1- \dfrac{\dot{W}_H}{\dot{W}_K}\ \eul^{-\mu\ k\ A_{wa}}}
 	\]
 
 \subsection{Rekuperatoren allgemein}
-	\[ 
+	\[
 		P_H = \dfrac{T_{H1} - T_{H2}}{T_{H1} - T_{K1}}
 		\qquad\qquad
 		P_K = \dfrac{T_{K2} - T_{K1}}{T_{H1} - T_{K1}}
 		\qquad\qquad
 		\eta = \max(P_H,P_K)
 	 \]
-	 \[ 
+	 \[
 	 	R_H = \dfrac{\dot{W}_H}{\dot{W}_K} = \dfrac{1}{R_K}
 	 	\qquad\qquad
 	 	\varTheta = \dfrac{T_H - T_K}{T_{H1} - T_{K1}} = F\ \varTheta_{Gegenstrom}
 	 \]
-	 
+
 	 $ F $ aus Betriebscharakteristik: $ f(P_H, \,N_H, \,N_K) = 0 $ oder $ f(P_H, \,N_H, \,R_H) = 0 $
 
 \subsection{Regeneratoren}
-	
+
 
 \subsection{Gasstrahlung}
-	Wärmestrom zw. heißem Gas (Flamme: $ \varepsilon_g,~ T_g $) einerseits und Wänden ($ T_w,~ \varepsilon_w $) 
-	
+	Wärmestrom zw. heißem Gas (Flamme: $ \varepsilon_g,~ T_g $) einerseits und Wänden ($ T_w,~ \varepsilon_w $)
+
 	und kaltem Gas an Wänden ($ T_w,~ a_g $) andererseits:
-	
+
 	\[ \varepsilon = \dfrac{\varepsilon_w\ \Cs\ A_w}{1-\left(1-a_g\right)\ (1-\varepsilon_w)\ } \left[ \varepsilon_g \left( \dfrac{T_g}{100} \right)^4 - a_g \left( \dfrac{T_w}{100} \right)^4 \right] \]
-	
-	mit $ \varepsilon_g  =  \varepsilon_{H2O} + \varepsilon_{CO2} - (\Delta\varepsilon)_g  $ 
-	
-	
-	
-	Emissionsgrade = Absorptionsgrade aus Diagrammen in Abhängigkeit von Temperatur, Druck, Partialdruck 
-	
+
+	mit $ \varepsilon_g  =  \varepsilon_{H2O} + \varepsilon_{CO2} - (\Delta\varepsilon)_g  $
+
+
+
+	Emissionsgrade = Absorptionsgrade aus Diagrammen in Abhängigkeit von Temperatur, Druck, Partialdruck
+
 	von CO2 bzw. H2O, überlappenden Banden und gleichwertiger Schichtdicke $ s $
-	
-	
-	
-	
+
+
+

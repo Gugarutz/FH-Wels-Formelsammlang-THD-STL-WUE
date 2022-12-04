@@ -1,0 +1,48 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "FS.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "section/WUE.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "FS.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 107
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/THD.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/STL.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "section/WUE.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
+            }
+        ],
+        "MasterFile": "FS.tex",
+        "VerticalSplit": false
+    }
+}
