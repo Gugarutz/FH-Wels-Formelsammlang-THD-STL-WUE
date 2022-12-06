@@ -2,16 +2,16 @@
 
 \section{Thermodynamik}
 %
-	\setlength{\abovedisplayskip}{-15pt}
-		\[ \arraycolsep=1em % \def\arraystretch{2}
-		\begin{array}{llll}
-			\text{isotherm:}  & \Delta u=0           & \Delta T=0                               & \Delta w = + R\ T  \ln \left(\dfrac{v_1}{v_2} \right) = - R\ T \ln \left(\dfrac{p_1}{p_2}\right) \\
-			\text{isobar:}    & \Delta w=R\ \Delta T & \Delta p=0 \Rightarrow \int{}v\dd p=0    & \Delta h = \Delta q_a \text{ wenn } \Delta q_R=0                                                 \\
-			\text{isochor:}   &                      & \Delta v=0 \Rightarrow \int p\dd v=0     & \Delta u = \Delta q_a \text{ wenn } \Delta q_R=0                                                 \\
-			\text{Enthalpie:} & h=u+pv               & %\multicolumn{1}{r}{\text{Molare Masse:}} & M = \dfrac{m}{n}
+	\skipabove{-15pt}
+		\[ \arraycolsep=0em % \def\arraystretch{2}
+		\begin{array}{l p{2em} l p{2em} l p{2em} l}
+			\text{isotherm:}  && \Delta u=0           && \Delta T=0                               && \Delta w = + R\ T  \ln \left(\dfrac{v_1}{v_2} \right) = - R\ T \ln \left(\dfrac{p_1}{p_2}\right) \\
+			\text{isobar:}    && \Delta w=R\ \Delta T && \Delta p=0 \Rightarrow \int{}v\dd p=0    && \Delta h = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
+			\text{isochor:}   &&                      && \Delta v=0 \Rightarrow \int p\dd v=0     && \Delta u = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
+			\text{Enthalpie:} && h=u+pv               && %\multicolumn{1}{r}{\text{Molare Masse:}}&& M = \dfrac{m}{n}
 		\end{array} \]
 	%
-	\setlength{\abovedisplayshortskip}{-10pt}
+	\skipabove{-10pt}
 		\[ \arraycolsep=1em  \def\arraystretch{1.4}
 		\begin{array}{llll}
 			\textbf{1. HS:} & \Delta h = \Delta q_a + \Delta q_R + \int v\ \dd p    & \Delta u = \Delta q_a + \Delta q_R - \int p\ \dd v & \Delta Q + \Delta W = \Delta U + \Delta E_a \\
@@ -20,15 +20,15 @@
 
 \subsection{Ideales Gas}
 %
-	\setlength{\abovedisplayskip}{-20pt}
-		\[ \arraycolsep=1em  \def\arraystretch{1.5}
+	\skipabove{-20pt}
+		\[ \arraycolsep=1em  \def\arraystretch{1.7}
 		\begin{array}{llll}
 			v_{mn}=22,414\, \dfrac{\si{Nm^3}}{\si{\kmol}}          & V_n = n\ v_{mn}                                                                               & R=\dfrac{\mathrm{R_m}}{M}       & \kappa = \dfrac{c_p}{c_v} \\
 			\mathrm{R_m} = \qty{8314,47}{\J\per\kmol\per\K}        & p\ v=R\ T                                                                                     & p\ V = m\ R\ T         & p\ V=n\ \mathrm{R_m}\ T            \\
 			c_p=\dfrac{c_{pm}}{M}=R+c_v=R \dfrac{\kappa}{\kappa-1} & c_p=c_p|_{t_1}^{t_2}  =   \dfrac{c_p|_{0}^{t_2}\cdot t_2 - c_p|_{0}^{t_1}\cdot t_1}{t_2- t_1} & \Delta u=c_v\ \Delta T & \Delta h=c_p\ \Delta T
 		\end{array} \]
 %
-	\setlength{\abovedisplayshortskip}{-14pt}
+	\skipabove{-15pt}
 		\[ \arraycolsep=1em  \def\arraystretch{2.7}
 		\begin{array}{lll}
 	  \Delta s = c_v \ln\left( \dfrac{T_2}{T_1}\right) + R \ln\left( \dfrac{v_2}{v_1}\right)
@@ -36,6 +36,7 @@
 			&  = c_p \ln\left( \dfrac{v_2}{v_1}\right) + c_v \ln\left( \dfrac{p_2}{p_1}\right)
 		\end{array} \]
 
+	\skipabove{-10pt}
 		\[ \arraycolsep=0.6em  \def\arraystretch{2.7}
 		\begin{array}{lll}
 			\text{Isentrope:}
@@ -59,28 +60,28 @@
 		\end{array} \]
 
 \subsection{Gemische idealer Gase -- Species \textit{i}}
-	\setlength{\abovedisplayshortskip}{-15pt}
-		\[ \arraycolsep=1em % \def\arraystretch{2}
-		\begin{array}{llll}
-			y_i = \dfrac{n_i}{n} = \dfrac{V_i}{V} = \dfrac{\dot{V_i}}{\dot{V}} = \dfrac{p_i}{p} & w_i  =  \dfrac{m_i}{m}  = \dfrac{\dot{m}_i}{\dot{m}} =  y_i \dfrac{M_i}{M} & M = \sum y_i\ M_i          & M_i = \dfrac{m_i}{n_i} \\
-			c_p = \sum c_{pi}\ w_i                                                              & \text{analog für: }  c_v,\ \Delta u,\ \Delta h,\ \Delta s                  & c_{mp} = \sum y_i\ c_{mpi} & \dot{V} = A\ c
+	\skipabove{-10pt}
+		\[ \arraycolsep=0em  \def\arraystretch{1.5}
+		\begin{array}{l p{2em} l p{2em} l p{2em} l}
+			y_i = \dfrac{n_i}{n} = \dfrac{V_i}{V} = \dfrac{\dot{V_i}}{\dot{V}} = \dfrac{p_i}{p} && w_i  =  \dfrac{m_i}{m}  = \dfrac{\dot{m}_i}{\dot{m}} =  y_i \dfrac{M_i}{M} && M = \sum y_i\ M_i         & & M_i = \dfrac{m_i}{n_i} \\
+			c_p = \sum c_{pi}\ w_i                                                              && \text{analog für: }  c_v,\ \Delta u,\ \Delta h,\ \Delta s                  && c_{mp} = \sum y_i\ c_{mpi}& & \dot{V} = A\ c
 		\end{array} \]
 
 \subsection{Inkompressible Flüssigkeiten}
-	\setlength{\abovedisplayshortskip}{-20pt}
-		\[ \arraycolsep=2em % \def\arraystretch{2}
-		\begin{array}{lll}
-			c_v = c_p               & v = \dfrac{1}{\varrho} = \text{konst.} & \dot{m} = \dot{V}\ \varrho                      \\
-			\Delta u = c_p \Delta T & \Delta h = c_p \Delta T + v \Delta p   & \Delta s = c_p \ln\left(\dfrac{T_2}{T_1}\right)
-		\end{array} \]
+	\skipabove{-15pt}
+	\[ \arraycolsep=0em % \def\arraystretch{2}
+	\begin{array}{l p{4em} l p{4em} l}
+		c_v = c_p               && v = \dfrac{1}{\varrho} = \text{konst.} && \dot{m} = \dot{V}\ \varrho                      \\
+		\Delta u = c_p \Delta T && \Delta h = c_p \Delta T + v \Delta p   && \Delta s = c_p \ln\left(\dfrac{T_2}{T_1}\right)
+	\end{array} \]
 
 \subsection{Gemische mischbarer, inkompressibler Flüssigkeiten -- Species \textit{i}}
-	\setlength{\abovedisplayskip}{-15pt}
-		\[  \arraycolsep=2em  \def\arraystretch{1.5}
-		\begin{array}{lll}
-			m_i = \dfrac{V_i}{v_i} & v   = \sum v_i w_i                                 & m   = \sum m_i   \qquad\qquad   w_i = \dfrac{m_i}{m}                                                    \\
-			c_p = \sum c_{pi} w_i  & \text{analog für}   \Delta u,\ \Delta h,\ \Delta s & \Delta s_i = c_{pi} \ln\left(\dfrac{T_{2i}}{T_{1i}}\right) + R_i \ln\left(\dfrac{v_{2i}}{v_{1i}}\right) \\
-			x_i = w_i \dfrac{M}{M_i} = \varphi_i \dfrac{v_i\ M_i}{v\ M} & w_i = x_i \dfrac{M_i}{M} = \varphi_i \dfrac{v}{v_i} & \varphi_i = x_i \dfrac{v\ M}{v_i\ M_i} = w_i \dfrac{v_i}{v}
+	\skipabove{-15pt}
+		\[  \arraycolsep=0em  \def\arraystretch{1.7}
+		\begin{array}{l p{3em} l p{3em} l}
+			m_i = \dfrac{V_i}{v_i}                                      &  & v   = \sum v_i w_i                                  &  & m   = \sum m_i   \qquad\qquad   w_i = \dfrac{m_i}{m}                                                    \\
+			c_p = \sum c_{pi} w_i                                       &  & \text{analog für }   \Delta u,\ \Delta h,\ \Delta s &  & \Delta s_i = c_{pi} \ln\left(\dfrac{T_{2i}}{T_{1i}}\right) + R_i \ln\left(\dfrac{v_{2i}}{v_{1i}}\right) \\
+			x_i = w_i \dfrac{M}{M_i} = \varphi_i \dfrac{v_i\ M_i}{v\ M} &  & w_i = x_i \dfrac{M_i}{M} = \varphi_i \dfrac{v}{v_i} &  & \varphi_i = x_i \, \dfrac{v\ M}{v_i\ M_i} = w_i \dfrac{v_i}{v}
 		\end{array} \]
 
 

@@ -25,8 +25,8 @@
 
 \subsection{Rohr -- Zylinderwände}
 	$ A_{wa} = d_a\ \pi\ L $, Deckflächen vernachlässigt
-		\qquad $ R_i = \dfrac{d_a}{d_i}   \dfrac{1}{\alpha_i}  $
-		\qquad $ R_{w,j} = \dfrac{d_a}{a} \dfrac{1}{\lambda_j} \ln\left( \dfrac{d_j}{d_{j-1}} \right) $
+		\qquad $ R_i = \dfrac{d_a}{d_i\ \alpha_i}     $
+		\qquad $ R_{w,j} = \dfrac{d_a}{2\ \lambda_j}  \ln\left( \dfrac{d_j}{d_{j-1}} \right) $
 		\qquad $ R_a = \dfrac{1}{\alpha_a} $
 
 \subsection{Kugelwände}
@@ -65,11 +65,10 @@
 \subsection{Rippen}
 	$ \eta_{Ri} = \dfrac{\dot{Q}_{Ri}}{\dot{Q}_{Ri,max}} = \dfrac{\tanh(m\ h)}{m\ h} $
 		\qquad $ m = \sqrt{\dfrac{\alpha\ U}{\lambda_{Ri}\ A}} $
-%		\qquad
+		\qquad siehe \ref{abb:rippe} (nächste Seite)
 
 	$ \dot{Q}_{Ri} = \lambda_{Ri}\ A_{Ri}\ \Delta T_0\ m \tanh(m\ h) $
 		\qquad  $ \Delta T_{(x)} = T_{(x)} - T_u = \Delta T_0\, \dfrac{\cosh\left(m\ h \left(1- \frac{x}{h}\right)\right)}{\cosh(m\ h)} $
-%		\qquad
 
 	$ \dfrac{A_{w,mit}}{A_{w,ohne}} = 1 - \dfrac{A_{Ri}}{A_{w,ohne}} + \dfrac{A_{w,Ri}}{A_{w,ohne}} $
 		\qquad\qquad $ \dfrac{\dot{Q}_{mit}}{\dot{Q}_{ohne}} = \dfrac{\alpha_{mit}}{\alpha_{ohne}} = 1 - \dfrac{A_{Ri}}{A_{w,ohne}}  + \dfrac{U_{Ri}}{A_{w,ohne}} \dfrac{\tanh(m\ h)}{m}$
@@ -80,26 +79,28 @@
 		\quad $ \Biot = \dfrac{\alpha\ s}{\lambda} $
 		\quad Platten: $ s = \dfrac{\Delta x}{2} $
 		\quad Zylinder, Kugeln: $ s = \dfrac{d_a}{a} $
-		\quad $\Theta = \dfrac{T - T_u}{T_0 - T_u}  $
+		\quad $\varTheta = \dfrac{T - T_u}{T_0 - T_u}  $
 
 \subsection{Konvektion}
 	Durchströmung: $ L_{char} = d_h = \dfrac{4\ A}{U} $ \qquad Umströmung: $ L_{char} = L' = \dfrac{A_w}{U_{proj}}$
 
 	\vskip 3pt
-	$ \Reyn = \dfrac{c\ L_{char}}{\nu} $
+	$ \Reyn = \dfrac{c\ L_{char}}{\nu} = \dfrac{c\ L_{char}\ \varrho}{\mu} $
 		\quad $ \Pran = \dfrac{\nu}{a} = \dfrac{\mu\ c_p}{\lambda} = \dfrac{\delta}{\delta_T} $
 		\quad $ \Rayl = \dfrac{g\ L_{char}\ \beta\ (T_w - T_{fl})}  {\nu\ a} $
 		\quad $ \Nuss = \dfrac{\alpha\ L_{char}}{\lambda} = \dfrac{L_{char}}{\delta_T} $
-		\quad $ \delta_T = \dfrac{\lambda}{\alpha} $
 
 	\vskip 6pt
 	$ \beta_{ideales~Gas} = \dfrac{1}{T_m} $
 		\qquad Stoffwerte der WUE bei $ T_m = \dfrac{T_w + T_{fl}}{2} $
+		\qquad $ \delta_T = \dfrac{\lambda}{\alpha} $
+		\qquad $ \alpha = \dfrac{\lambda}{L'} \Nuss $
+		\qquad $ \nu = \dfrac{\mu}{\varrho} $
 
 
 \subsection{Erzwungene Konvektion}
 \subsubsection{Durchströmung}
-	\setlength{\abovedisplayskip}{-20pt}
+	\skipabove{-20pt}
 	\[ \arraycolsep=0.2em  \def\arraystretch{2}
 	\begin{array}{lrll}
 		\text{Laminar } \Reyn <2300: & \Nuss_{lam} & \multicolumn{2}{l}{ = \sqrt[3]{3,66^3 + 0,664^3\ \Pran \left(\Reyn \dfrac{d_h}{L}\right)^{\nicefrac{3}{2}}}}\\
@@ -110,24 +111,24 @@
 	\end{array} \]
 
 \subsubsection{Umströmung}
-	\setlength{\abovedisplayskip}{-20pt}
+	\skipabove{-20pt}
 	\[ \arraycolsep=0.2em  \def\arraystretch{2}
 	\begin{array}{lrrl}
 		\text{Keine Anströmung: } & \Reyn<0,1:            & \Nuss_0      & = 0,1\ (\text{Platte}) \quad 0,3\ (\text{Zylinder}) \quad 2\ (\text{Kugel})                        \\
 		\text{laminar: }          & 1<\Reyn<10^5:         & \Nuss_{lam}  & = 0,664 \sqrt[3]{\Pran}\sqrt{\Reyn}                                                                \\
-		\text{Turbulent: }        & \num{5e5}<\Reyn<10^7: & \Nuss_{turb} & = \dfrac{0,037\ \Reyn^{0,8} \Pran}{1+ 2,443\ \Reyn^{-0,1} \left(\Pran^{\sfrac{2}{3}-1}\right)} f_3\\
-		\multicolumn{2}{c}{f_{3,fl} =\left(\dfrac{\Pran}{\Pran_w}\right)^{0,25}} & \multicolumn{2}{c}{f_{2,g} = \left(\dfrac{T}{T_w}\right)^{0,121}}\\
+		\text{Turbulent: }        & \num{5e5}<\Reyn<10^7: & \Nuss_{turb} & = \dfrac{0,037\ \Reyn^{0,8} \Pran}{1+ 2,443\ \Reyn^{-0,1} \left(\Pran^{\sfrac{2}{3}} - 1\right)} f_3\\
+		\multicolumn{2}{c}{f_{3,fl} =\left(\dfrac{\Pran}{\Pran_w}\right)^{0,25}} & \multicolumn{2}{c}{f_{3,g} = \left(\dfrac{T}{T_w}\right)^{0,121}}\\
 		\text{Übergang: } & 10<\Reyn<10^7 & \Nuss& = \sqrt{\Nuss_{lam}^2 + \Nuss_{turb}^2}
 	\end{array} \]
 
-	\setlength{\abovedisplayskip}{-10pt}
+	\skipabove{-10pt}
 	\[ \arraycolsep=1em  \def\arraystretch{1.5}
 	\begin{array}{lll}
 		\text{Schräg umströmter Zylinder:}
 			& \text{Korrekturfaktor } f_5
 			& \text{Längs umströmter Zylinder:} \\
 		 \Nuss = \Nuss_{Zylinder,\ang{90}} \ f_5
-			&  f_5 = \text{siehe Diag. nach \ref{sec:um-in-durch}}
+			&  f_5 = \text{siehe Diag. \ref{abb:f5}}
 			&  \Nuss =  \Nuss_{Platte}  \left(1+ 2,3 \dfrac{L}{d} \Reyn_L^{-0,5}\right)
 	\end{array}\]
 
@@ -135,23 +136,35 @@
 		\skipabove{-20pt}
 		\[ \arraycolsep=1em  \def\arraystretch{1.7}
 		\begin{array}{ll}
-			\text{Hohlraumanteil:}                                                                                            & \multirow{3}{0.24\textwidth}{\includegraphics[width=\linewidth]{hohlraumanteil}} \\
-			\varepsilon = 1- \dfrac{V_K}{V_0}  \qquad  c = \dfrac{c_0}{\varepsilon}                                           &                                                                                  \\
-			\text{Rohrbündel:}                                                                                                & \multirow{9}{0.5\textwidth}{\includegraphics[width=\linewidth]{rohrbuendel}}     \\
-			a = \dfrac{s_1}{d}  \qquad  b = \dfrac{s_2}{d}                                                                    &                                                                                  \\
-			\Nuss_{B\ue ndel} = \Nuss_{einzel}\ f_A                                                                           &                                                                                  \\
-			f_{A,fluchtend} = 1+ \dfrac{0,7 \left(\nicefrac{b}{a}-0,3\right)}{\varepsilon \left(\nicefrac{b}{a}+0,7\right)^2} &                                                                                  \\
-			f_{A,versetzt} = 1 + \dfrac{2}{3\ b}                                                                              &                                                                                  \\
-			n < 10: f_A = \dfrac{1+ (n-1) f_A}{n}                                                                             &                                                                                  \\
-			\null                                                                                                             &                                                                                  \\
-			\null                                                                                                             &                                                                                  \\
-			\null                                                                                                             &
+			\text{Hohlraumanteil:}                                                                                                  & \multirow{3}{0.24\textwidth}{\includegraphics[width=\linewidth]{hohlraumanteil}} \\
+			\varepsilon = 1- \dfrac{V_K}{V_0}  \qquad  c = \dfrac{c_0}{\varepsilon}                                                 &                                                                                  \\
+			\text{Rohrbündel:}                                                                                                      & \multirow{9}{0.5\textwidth}{\includegraphics[width=\linewidth]{rohrbuendel}}     \\
+			a = \dfrac{s_1}{d}  \qquad  b = \dfrac{s_2}{d}                                                                          &                                                                                  \\
+			\Nuss_{B\ue ndel} = \Nuss_{einzel}\ f_A                                                                                 &                                                                                  \\
+			f_{A,fluchtend} = 1+ \dfrac{0,7 \left(\nicefrac{b}{a}-0,3\right)}{\varepsilon^{1,5} \left(\nicefrac{b}{a}+0,7\right)^2} &                                                                                  \\
+			f_{A,versetzt} = 1 + \dfrac{2}{3\ b}                                                                                    &                                                                                  \\
+			n \leq 10:\quad  f_{A,10} = \dfrac{1+ (n-1) f_A}{n}                                                                     &                                                                                  \\
+			n \dots \text{Reihen}                                                                                                   &                                                                                  \\
+			\null                                                                                                                   &                                                                                  \\
+			\null                                                                                                                   &
 		\end{array} \]
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=9cm]{nusselt-winkel}
-		\caption{Weil die Formel für $ f_5 $ noch fehlt}
+		\begin{subfigure}{7cm}
+			\centering
+			\includegraphics[width=\linewidth]{nusselt-winkel}
+			\caption{Weil die Formel für $ f_5 $ noch fehlt}
+			\label{abb:f5}
+		\end{subfigure}
+	\hskip 4em
+		\begin{subfigure}{5cm}
+			\centering
+			\includegraphics[width=\linewidth]{rippe}
+			\caption{Rippengeometrie (für $ m $)}
+			\label{abb:rippe}
+		\end{subfigure}
+		\caption{Hilfen etc.}
 	\end{figure}
 
 
