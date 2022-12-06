@@ -16,7 +16,7 @@
 	\clearpairofpagestyles		% clears existing pagestyle % \clearscrheadfoot deprecated
 	%\automark[section]{section} 	% [right] and {left} markings respectively
 	%\ihead[]{\headmark}			% auto assign even and odd to left and right resp
-	\cfoot[]{\pagemark}			% pagenumber
+	\ofoot[]{\underline{\pagemark}}			% pagenumber
 
 \usepackage[ngerman]{babel}   	% Deutsche Einstellungen
 \usepackage[utf8]{inputenc}  	% utf-8 Eingabe
@@ -41,13 +41,14 @@
 
 \usepackage{geometry}
 	\geometry{	a4paper,
-				top=1cm,
-				bottom=0.7cm,
+				top=1.5cm,
+				bottom=1.4cm,
 				left=2cm,
 				right=0.5cm,
-				footskip=0.5cm,
-				headsep=0pt,
-				includeheadfoot
+				footskip=0.3cm,
+%				headsep=0pt,
+				includeheadfoot,
+				nohead
 			}
 
 \usepackage{graphicx}
@@ -118,7 +119,7 @@
 	\newcommand{\Stro}{\operatorname{\mathit{S\kern-.07em r}}} % http://de.wikipedia.org/wiki/Strouhal-Zahl
 	\newcommand{\Webe}{\operatorname{\mathit{W\kern-.30em e}}} % http://de.wikipedia.org/wiki/Weber-Zahl
 
-%\usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
+% \usepackage{showframe}		% auskommentieren vor finalem build % shows frames around margin, head, foot, etc;
 % \includeonly{	THD,		%nach belieben wählen
 %				STL,
 %				WUE

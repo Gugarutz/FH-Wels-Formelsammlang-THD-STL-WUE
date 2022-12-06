@@ -233,12 +233,13 @@
 	\]
 \subsection{Laminare Durchströmung}
 	$ \Reyn_{dh} < 2300 $ \quad	Rohrreibungsbeiwert $ \lambda = \dfrac{64}{\Reyn_{dh}} $ \qquad	Hydrodynamische Einlaufstrecke $ \dfrac{L_e}{d_h} = \num{0,06} \Reyn_{dh}  $
-	\setlength{\abovedisplayskip}{5pt}
-	\[ \arraycolsep=1em
-	\begin{array}{lllll}
-		\text{Couette Strömung:} & \dfrac{c_{(y)}}{c_{max}} = \dfrac{y}{h}                                                            & c_{max} = konst.                                       & A = b\ h     & \overline{c} = \dfrac{1}{2} c_{max} \\
-		\text{Kanal Strömung:}   & \dfrac{c_{(y)}}{c_{max}} = 4 \left[\left(\dfrac{y}{h}\right) - \left(\dfrac{y}{h}\right)^2 \right] & c_{max} = \dfrac{1\ \Delta p_v\ h^2}{\mu\ \Delta L\ 8} & A = b\ h     & \overline{c} = \dfrac{2}{3} c_{max} \\
-		\text{Rohr Strömung:}    & \dfrac{c_{(r)}}{c_{max}} = 1 - \left(\dfrac{r}{R}\right)^2                                         & c_{max} = \dfrac{1\ \Delta p_v\ R^2}{\mu\ \Delta L\ 4} & A = R^2\ \pi & \overline{c} = \dfrac{1}{2} c_{max}
+
+	\skipabove{-5pt}
+	\[ \arraycolsep=0em
+	\begin{array}{l p{0.7em} l p{1.5em} l p{1.5em} l p{1.5em} l} % ich mag es nicht aber sonst indent :/
+		\text{Couette Strömung:} && \dfrac{c_{(y)}}{c_{max}} = \dfrac{y}{h}                                                            && c_{max} = konst.                                       && A = b\ h     && \overline{c} = \dfrac{1}{2} c_{max} \\
+		\text{Kanal Strömung:}   && \dfrac{c_{(y)}}{c_{max}} = 4 \left[\left(\dfrac{y}{h}\right) - \left(\dfrac{y}{h}\right)^2 \right] && c_{max} = \dfrac{1\ \Delta p_v\ h^2}{\mu\ \Delta L\ 8} && A = b\ h     && \overline{c} = \dfrac{2}{3} c_{max} \\
+		\text{Rohr Strömung:}    && \dfrac{c_{(r)}}{c_{max}} = 1 - \left(\dfrac{r}{R}\right)^2                                         && c_{max} = \dfrac{1\ \Delta p_v\ R^2}{\mu\ \Delta L\ 4} && A = R^2\ \pi && \overline{c} = \dfrac{1}{2} c_{max}
 	\end{array}
 	\]
 \subsection{Turbulente Durchströmung}
@@ -248,16 +249,16 @@
 
 \subsection{Strömungsmaschinen}
 %
-	\begin{center}
+	\begin{flushleft}
 		\setlength{\tabcolsep}{1.3em} % for the horizontal padding
 		\begin{tabular}{lll}
 			Drehzahl $ \dot{n} $                     & \multicolumn{2}{l}{Winkelgeschwindigkeit $ \omega = 2\ \pi\ \dot{n} $}                              \\
 			Umfangsgeschwindigkeit $ u = r\ \omega $ & Relativgeschwindigkeit $ w $                       & Absolutgeschwindigkeit $ c $ \\
 			Index $ r $ steht für Radialkomponente   & \multicolumn{2}{l}{Index $ u $ steht für Umfangskomponente}
 		\end{tabular}
-	\end{center}
+	\end{flushleft}
 
-	\setlength{\abovedisplayskip}{-10pt}
+	\skipabove{-10pt}
 		\[\arraycolsep=0.1em %\def\arraystretch{2}
 		\begin{array}{ll}
 			\text{MB: } \dot{m} = \varrho\ A_1\ c_{1r} = \varrho\ A_2\ c_{2r}                       & \text{EB: } \Delta p = \varrho\left[ \Delta w - \frac{1}{2} (c_2^2 - c_1^2) - \Delta q_R\right] \\
