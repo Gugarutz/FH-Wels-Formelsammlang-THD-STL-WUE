@@ -5,10 +5,10 @@
 	\skipabove{-15pt}
 		\[ \arraycolsep=0em % \def\arraystretch{2}
 		\begin{array}{l p{2em} l p{2em} l p{2em} l}
-			\text{isotherm:}  && \Delta u=0           && \Delta T=0                               && \Delta w = + R\ T  \ln \left(\dfrac{v_1}{v_2} \right) = - R\ T \ln \left(\dfrac{p_1}{p_2}\right) \\
-			\text{isobar:}    && \Delta w=R\ \Delta T && \Delta p=0 \Rightarrow \int{}v\dd p=0    && \Delta h = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
-			\text{isochor:}   &&                      && \Delta v=0 \Rightarrow \int p\dd v=0     && \Delta u = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
-			\text{Enthalpie:} && h=u+pv               && %\multicolumn{1}{r}{\text{Molare Masse:}}&& M = \dfrac{m}{n}
+			\textbf{isotherm:}  && \Delta u=0           && \Delta T=0                               && \Delta w = + R\ T  \ln \left(\dfrac{v_1}{v_2} \right) = - R\ T \ln \left(\dfrac{p_1}{p_2}\right) \\
+			\textbf{isobar:}    && \Delta w=R\ \Delta T && \Delta p=0 \Rightarrow \int{}v\dd p=0    && \Delta h = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
+			\textbf{isochor:}   &&                      && \Delta v=0 \Rightarrow \int p\dd v=0     && \Delta u = \Delta q_a \text{ wenn } \Delta q_R = 0                                                 \\
+			\textbf{Enthalpie:} && h=u+pv               && \multicolumn{1}{r}{\textbf{Molare Masse:}} && M = \dfrac{m}{n}
 		\end{array} \]
 	%
 	\skipabove{-10pt}
@@ -164,6 +164,6 @@
 		\text{Arbeit:}                     & e = \Delta w_{\eff}                                                                                             \\
 		\text{Geschlossenes System:}       & e = u - u_u - T_u\ (s-s_u) - p_u\ (v_u-v)                                                                       \\
 		\text{Fluid Strom}:                & e = h - h_u - T_u\ (s-s_u)                                                                                      \\
-		\text{Wärme:}                      & e = \mathlarger{\int} \left(1-\dfrac{T_u}{T} \right) \dd q_a  \cong \left(1-\dfrac{T_u}{T_m} \right) \Delta q_a \\
+		\text{Wärme:}                      & e = \displaystyle\left(1-\dfrac{T_u}{T} \right) \dd q_a  \cong \left(1-\dfrac{T_u}{T_m} \right) \Delta q_a \\
 		\text{Exergetischer Wirkungsgrad:} & \zeta = \dfrac{e_{ab}}{e_{zu}}
 	\end{array} \]
